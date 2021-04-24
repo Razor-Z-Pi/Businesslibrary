@@ -1,0 +1,16 @@
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.exe.config
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.exe
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.pdb
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csprojAssemblyReference.cache
+J:\CourseLibrary\Git\obj\Debug\MainWindow.g.cs
+J:\CourseLibrary\Git\obj\Debug\App.g.cs
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.lref
+J:\CourseLibrary\Git\obj\Debug\App.baml
+J:\CourseLibrary\Git\obj\Debug\MainWindow.baml
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.g.resources
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.Properties.Resources.resources
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.exe
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.pdb

@@ -94,5 +94,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icon\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Window\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="free-icon-library-1818714.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

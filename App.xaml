@@ -4,6 +4,19 @@
              xmlns:local="clr-namespace:CourseLibrary"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <LinearGradientBrush x:Key="font">
+            <GradientStop Offset="0.5" Color="#fad852"></GradientStop>
+            <GradientStop Offset="0.6" Color="#d7e087"></GradientStop>
+        </LinearGradientBrush>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="SeaGreen"></Setter>
+            <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+        </Style>
+
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="12"></Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

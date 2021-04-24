@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseLibrary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+ Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="free-icon-library-1818714.png">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Шапка-->
+        <StackPanel Grid.Row="0" Background="Firebrick" Grid.ColumnSpan="2">
+            <TextBlock Text="Вход в великую Библиотеку" 
+                       TextAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Margin="0 18"
+                       FontSize="32"
+                       Foreground="WhiteSmoke"
+                       FontFamily="Oswald sans-serif"></TextBlock>
+        </StackPanel>
+
+        <!--Тело-->
+        <StackPanel Grid.Row="1" Background="{StaticResource font}" Grid.ColumnSpan="2">
+            <Grid Height="392">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="400"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="/images/book.png" Grid.Column="0" Margin="0,15,0,0"/>
+
+                <StackPanel Grid.Column="1"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Width="150">
+                    <TextBlock TextAlignment="Center" Text="Логин"></TextBlock>
+                    <TextBox></TextBox>
+                    <TextBlock TextAlignment="Center" Text="Пароль"></TextBlock>
+                    <PasswordBox></PasswordBox>
+                    <Separator Height="20"/>
+                    <Button Width="60" Height="30" Content="Войти"></Button>
+                </StackPanel>
+
+                <Grid Grid.Column="1" Margin="10,247,0,100" Width="250" HorizontalAlignment="Center" Height="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22*"></ColumnDefinition>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="125"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton Grid.Column="0" Content="Запомнить данные" Grid.ColumnSpan="2"></RadioButton>
+                    <RadioButton Grid.Column="2" Content="Показать пароль"></RadioButton>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <!--Подвал-->
+        <StackPanel Grid.Row="2" Background="Bisque" Grid.ColumnSpan="2">
+            <TextBlock Text="Приложение Библиотека от Попова Павла Представляет, все права защещины!!!" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       Margin="0 18"></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
