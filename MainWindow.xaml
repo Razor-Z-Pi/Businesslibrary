@@ -4,8 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CourseLibrary"
+        xmlns:timers="clr-namespace:System.Timers;assembly=System"
         mc:Ignorable="d"
- Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="free-icon-library-1818714.png">
+ Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png">
+
+    <!--Разбивка сетки на строки-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
@@ -33,28 +36,41 @@
                     <ColumnDefinition Width="400"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
+                <!--Логотип проги-->
                 <Image Source="/images/book.png" Grid.Column="0" Margin="0,15,0,0"/>
 
+                <!--Компановка окна с полями авторизации-->
                 <StackPanel Grid.Column="1"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             Width="150">
                     <TextBlock TextAlignment="Center" Text="Логин"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBox x:Name="Login" Text="" MaxLength="10"></TextBox>
                     <TextBlock TextAlignment="Center" Text="Пароль"></TextBlock>
-                    <PasswordBox></PasswordBox>
+                    <TextBox x:Name="Password" Text="" MaxLength="12" Visibility="Hidden"></TextBox>
+                    <PasswordBox x:Name="Password_1"  MaxLength="12" RenderTransformOrigin="0.53,-0.167" Height="20">
+                        <PasswordBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0.332"/>
+                                <RotateTransform Angle="-0.042"/>
+                                <TranslateTransform X="0.294" Y="-18.268"/>
+                            </TransformGroup>
+                        </PasswordBox.RenderTransform>
+                    </PasswordBox>
                     <Separator Height="20"/>
-                    <Button Width="60" Height="30" Content="Войти"></Button>
+                    <Button Width="60" Height="30" Content="Войти" x:Name="btnOpen" Click="Button_Click"></Button>
                 </StackPanel>
 
-                <Grid Grid.Column="1" Margin="10,247,0,100" Width="250" HorizontalAlignment="Center" Height="20">
+                <!--Доп сетка для флажков-->
+                <Grid Grid.Column="1" Margin="80,282,64,86" Width="256" HorizontalAlignment="Center" RenderTransformOrigin="0.5,1.5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="22*"></ColumnDefinition>
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="125"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <RadioButton Grid.Column="0" Content="Запомнить данные" Grid.ColumnSpan="2"></RadioButton>
-                    <RadioButton Grid.Column="2" Content="Показать пароль"></RadioButton>
+                    <CheckBox Grid.Column="0" Content="Запомнить данные" Grid.ColumnSpan="2" x:Name="Load_date"></CheckBox>
+                    <CheckBox Grid.Column="2" Content="Показать пароль" x:Name="Password_ninjza" Click="Password_ninjza_Click"></CheckBox>
                 </Grid>
             </Grid>
         </StackPanel>

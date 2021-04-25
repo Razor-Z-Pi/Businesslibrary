@@ -14,3 +14,28 @@ J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
 J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
 J:\CourseLibrary\Git\obj\Debug\CourseLibrary.exe
 J:\CourseLibrary\Git\obj\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csprojAssemblyReference.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\MainWindow.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\App.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_Content.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.lref
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.exe
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\WorkGo.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.exe.config
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.exe
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.xml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\App.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\MainWindow.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\WorkGo.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.g.resources
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.Properties.Resources.resources
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete

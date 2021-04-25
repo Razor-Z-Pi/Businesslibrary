@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("free-icon-library-1818714.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modellibrary.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modellibrary.tt")]
 
 

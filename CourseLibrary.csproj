@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Accounting.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Avtor.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Avtorization.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Genre.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelLibrary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profer.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ModelLibrary.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkGo.xaml.cs">
+      <DependentUpon>WorkGo.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,8 +111,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WorkGo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelLibrary.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLibrary.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelLibrary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelLibrary.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +144,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelLibrary.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelLibrary.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelLibrary.edmx.diagram">
+      <DependentUpon>ModelLibrary.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,15 +161,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="icon\" />
     <Folder Include="Pages\" />
-    <Folder Include="Window\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\book.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="free-icon-library-1818714.png" />
+    <Resource Include="icon\free-icon-library-1818714.png" />
+    <Content Include="ModelLibrary.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelLibrary.edmx</DependentUpon>
+      <LastGenOutput>ModelLibrary.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelLibrary.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelLibrary.edmx</DependentUpon>
+      <LastGenOutput>ModelLibrary.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
