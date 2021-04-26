@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CourseLibrary"
         xmlns:timers="clr-namespace:System.Timers;assembly=System"
         mc:Ignorable="d"
- Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png">
+ Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png" Loaded="Window_Loaded" Activated="Window_Activated">
 
     <!--Разбивка сетки на строки-->
     <Grid>

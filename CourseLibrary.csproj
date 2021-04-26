@@ -161,6 +161,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Class\" />
     <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
