@@ -6,7 +6,74 @@
         xmlns:local="clr-namespace:CourseLibrary"
         mc:Ignorable="d"
          Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png">
+
+    <Window.Resources>
+
+        <ImageBrush x:Key="mouse_over" ImageSource=""></ImageBrush>
+    </Window.Resources>
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="316*"></RowDefinition>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick">
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 69">
+                <TextBox Width="200" Height="30" TextAlignment="Center" MaxLength="30"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Background="{StaticResource font}" Grid.Column="1" Grid.RowSpan="2">
+            <Frame x:Name="frm"></Frame>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick"></StackPanel>
+        <StackPanel Grid.Column="0" Background="{StaticResource header-left}" Grid.RowSpan="3">
+            <ToggleButton x:Name="Tg_Btn"
+                          VerticalAlignment="Center"
+                          Margin="0 10"
+                          Height="40"
+                          Width="40"
+                          BorderThickness="0">
+                <ToggleButton.Background>
+                    <ImageBrush ImageSource="./icon/bg.png"></ImageBrush>
+                </ToggleButton.Background>
+
+                <ToggleButton.Triggers>
+                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="HSP">
+                                <DoubleAnimation Storyboard.TargetName="nav"
+                                                 Storyboard.TargetProperty="Width"
+                                                 BeginTime="0:0:0"
+                                                 From="230" To="65"
+                                                 Duration="0:0:0.2"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+
+                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="SSP">
+                                <DoubleAnimation
+                                    Storyboard.TargetName="nav1"
+                                    Storyboard.TargetProperty="Width"
+                                    BeginTime="0:0:0"
+                                    From="65" To="230"
+                                    Duration="0:0:0.3">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </ToggleButton.Triggers>
+            </ToggleButton>
+        </StackPanel>
     </Grid>
 </Window>

@@ -169,6 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon\free-icon-library-1818714.png" />
+    <Resource Include="icon\avtor.png" />
+    <Resource Include="icon\bg.png" />
+    <Resource Include="icon\book.png" />
+    <Resource Include="icon\genre.png" />
+    <Resource Include="icon\otch.png" />
+    <Resource Include="icon\rucov.png" />
+    <Resource Include="icon\student_3540.png" />
+    <Resource Include="icon\Авторизация.png" />
+    <Resource Include="icon\address.png" />
     <Content Include="ModelLibrary.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelLibrary.edmx</DependentUpon>
