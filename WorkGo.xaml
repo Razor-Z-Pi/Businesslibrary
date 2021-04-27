@@ -7,6 +7,38 @@
         mc:Ignorable="d"
          Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png">
     <Grid>
-        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick">
+        </StackPanel>
+
+  
+            <Frame Grid.Row="1"  Background="{StaticResource font}" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden" Height="420"></Frame>
+
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal">
+                <Menu Background="Transparent" Foreground="WhiteSmoke">
+                    <MenuItem Header="Отчёт"></MenuItem>
+                    <MenuItem Header="Devops"></MenuItem>
+                </Menu>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0" Background="{StaticResource header-left}">
+                <Button Height="50" Content="Книга" Background="Transparent" BorderThickness="0" x:Name="btn_book" Click="Btn_book_Click" ></Button>
+                <Button Height="50" Content="Автор"  Background="Transparent"  BorderThickness="0" x:Name="btn_avtor" Click="Btn_avtor_Click"></Button>
+                <Button Height="50" Content="Жанр"  Background="Transparent"  BorderThickness="0" x:Name="btn_genre" Click="Btn_genre_Click" ></Button>
+                <Button Height="50" Content="Студенты"  Background="Transparent"  BorderThickness="0" x:Name="btn_student" Click="Btn_student_Click"></Button>
+                <Button Height="50" Content="Адрес"  Background="Transparent"  BorderThickness="0" x:Name="btn_address" Click="Btn_address_Click"></Button>
+                <Button Height="50" Content="Учёт"  Background="Transparent"  BorderThickness="0" x:Name="btn_acountin" Click="Btn_acountin_Click"></Button>
+                <Button Height="50" Content="Руководители"  Background="Transparent"  BorderThickness="0" x:Name="btn_profer" Click="Btn_profer_Click"></Button>
+                <Button Height="70" Content="Авторизация"  Background="Transparent"  BorderThickness="0" Visibility="Hidden"></Button>
+            </StackPanel>
     </Grid>
 </Window>

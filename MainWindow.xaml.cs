@@ -78,7 +78,7 @@ namespace CourseLibrary
                 try // Для не предвиденных событий
                 {
                     var userObj = contex.Avtorizations.FirstOrDefault(x => x.Login == Login.Text && x.Password == Password.Text); // Проверка и сопастовления введёных данных пользователя с существующеми данными в БД
-                    var profer = contex.Profers.FirstOrDefault(); // Для вытягивания данных о руководителях
+                    var profer = contex.Profer.FirstOrDefault(); // Для вытягивания данных о руководителях
 
                     if (userObj == null) // Если пользователь ввёл не правильно данные
                     {

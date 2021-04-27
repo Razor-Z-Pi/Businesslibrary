@@ -37,13 +37,13 @@ namespace CourseLibrary
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Accounting> Accountings { get; set; }
-        public virtual DbSet<Address> Addresses { get; set; }
-        public virtual DbSet<Avtor> Avtors { get; set; }
+        public virtual DbSet<Accounting> Accounting { get; set; }
+        public virtual DbSet<Address> Address { get; set; }
+        public virtual DbSet<Avtor> Avtor { get; set; }
         public virtual DbSet<Avtorization> Avtorizations { get; set; }
         public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<Genre> Genres { get; set; }
-        public virtual DbSet<Profer> Profers { get; set; }
+        public virtual DbSet<Genre> Genre { get; set; }
+        public virtual DbSet<Profer> Profer { get; set; }
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }

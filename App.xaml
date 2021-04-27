@@ -9,6 +9,11 @@
             <GradientStop Offset="0.6" Color="#d7e087"></GradientStop>
         </LinearGradientBrush>
 
+        <LinearGradientBrush x:Key="header-left">
+            <GradientStop Offset="0.5" Color="#1077de"></GradientStop>
+            <GradientStop Offset="0.6" Color="#003b75"></GradientStop>
+        </LinearGradientBrush>
+
         <Style TargetType="Button">
             <Setter Property="Background" Value="SeaGreen"></Setter>
             <Setter Property="Foreground" Value="WhiteSmoke"></Setter>

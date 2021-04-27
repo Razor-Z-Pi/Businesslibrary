@@ -173,7 +173,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Student_Address">
+  <Association Name="FK_Student_Address1">
     <End Role="Address" Type="Self.Address" Multiplicity="1" />
     <End Role="Student" Type="Self.Student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -235,7 +235,7 @@
       <End Role="Avtorization" EntitySet="Avtorization" />
       <End Role="Profer" EntitySet="Profer" />
     </AssociationSet>
-    <AssociationSet Name="FK_Student_Address" Association="Self.FK_Student_Address">
+    <AssociationSet Name="FK_Student_Address1" Association="Self.FK_Student_Address1">
       <End Role="Address" EntitySet="Address" />
       <End Role="Student" EntitySet="Student" />
     </AssociationSet>

@@ -39,3 +39,17 @@ C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Cour
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Books1.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Books1.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Acounting.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Address.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Avtor.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Genre.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Profer.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Students.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Acounting.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Address.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Avtor.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Genre.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Profer.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Students.baml

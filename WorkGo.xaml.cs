@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CourseLibrary.Class;
+using CourseLibrary.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,42 @@ namespace CourseLibrary
         public WorkGo()
         {
             InitializeComponent();
+            AddFrame.frame = frm;
+        }
+
+        private void Btn_book_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Books1());
+        }
+
+        private void Btn_avtor_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Avtor());
+        }
+
+        private void Btn_genre_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Genre());
+        }
+
+        private void Btn_student_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Students());
+        }
+
+        private void Btn_address_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Address());
+        }
+
+        private void Btn_acountin_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Acounting());
+        }
+
+        private void Btn_profer_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Profer());
         }
     }
 }
