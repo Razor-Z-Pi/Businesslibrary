@@ -31,14 +31,12 @@ namespace CourseLibrary
 
         int num = 0; // Переменная для счётчика движения, при не правильном входе в приложение
         int on = 0; // Переменная которая в дальнейшем будет влиять на запоминания
-        BusinessLibraryEntities contex; // Обьявление БД
         static StreamWriter sw; // Поток для записи в файл
         static StreamReader sr; // Поток для чтения из файла
 
         public MainWindow()
         {
             InitializeComponent();
-            contex = new BusinessLibraryEntities(); // Подключённая БД
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -77,8 +75,8 @@ namespace CourseLibrary
 
                 try // Для не предвиденных событий
                 {
-                    var userObj = contex.Avtorizations.FirstOrDefault(x => x.Login == Login.Text && x.Password == Password.Text); // Проверка и сопастовления введёных данных пользователя с существующеми данными в БД
-                    var profer = contex.Profer.FirstOrDefault(); // Для вытягивания данных о руководителях
+                    var userObj = BusinessLibraryEntities.GetContex().Avtorizations.FirstOrDefault(x => x.Login == Login.Text && x.Password == Password.Text); // Проверка и сопастовления введёных данных пользователя с существующеми данными в БД
+                    var profer = BusinessLibraryEntities.GetContex().Profer.FirstOrDefault(); // Для вытягивания данных о руководителях
 
                     if (userObj == null) // Если пользователь ввёл не правильно данные
                     {

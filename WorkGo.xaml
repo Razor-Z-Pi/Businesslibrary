@@ -20,8 +20,8 @@
         <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick">
         </StackPanel>
 
-  
-            <Frame Grid.Row="1"  Background="{StaticResource font}" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden" Height="420"></Frame>
+
+        <Frame Grid.Row="1"  Background="{StaticResource font}" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden" Height="420"></Frame>
 
 
             <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal">

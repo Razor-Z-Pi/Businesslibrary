@@ -9,15 +9,24 @@
       Title="Address">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0">
-            <TextBox Width="200" Height="30" TextAlignment="Center" MaxLength="30"/>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0" Orientation="Horizontal">
+            <Button Content="Добавить" Width="100" x:Name="btn_add" Click="Btn_add_Click"></Button>
+            <Button Content="Удалить" Margin="10 0"  Width="100" x:Name="btn_delete" Click="Btn_delete_Click"></Button>
+            <TextBox Width="200" Height="30" TextAlignment="Center" MaxLength="30" TextChanged="TextBox_TextChanged" x:Name="Txtext"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="0 30 0 0">
-            <DataGrid AutoGenerateColumns="False" x:Name="datagrid" ColumnWidth="*">
+            <DataGrid AutoGenerateColumns="False" x:Name="datagrid" ColumnWidth="*" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Улица" Binding="{Binding Strets}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Дом" Binding="{Binding Home}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Квартира" Binding="{Binding Kv}"></DataGridTextColumn>
+                    <DataGridTemplateColumn Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Редактировать" x:Name="btn_bild"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>

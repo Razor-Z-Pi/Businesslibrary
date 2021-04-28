@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\App.xaml
-9-751822101
+171592177382
 21323173232
-27-1401394189
+34-1748688055
 183488947
-MainWindow.xaml;Pages\Acounting.xaml;Pages\Address.xaml;Pages\Avtor.xaml;Pages\Books1.xaml;Pages\Genre.xaml;Pages\Profer.xaml;Pages\Students.xaml;WorkGo.xaml;
+AddPages\PAccounting.xaml;AddPages\PAddress.xaml;AddPages\PAvtor.xaml;AddPages\PAvtorization.xaml;AddPages\Pbook.xaml;AddPages\PGenre.xaml;AddPages\PProfer.xaml;AddPages\PStudent.xaml;MainWindow.xaml;Pages\Acounting.xaml;Pages\Address.xaml;Pages\Avtor.xaml;Pages\Books1.xaml;Pages\Genre.xaml;Pages\Profer.xaml;Pages\Students.xaml;WorkGo.xaml;
 
-True
+False
 

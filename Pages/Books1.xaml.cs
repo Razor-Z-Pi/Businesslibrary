@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseLibrary.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,28 @@ namespace CourseLibrary.Pages
     /// </summary>
     public partial class Books1 : Page
     {
-        BusinessLibraryEntities contex; // Обьявление БД
         public Books1()
         {
             InitializeComponent();
-            contex = new BusinessLibraryEntities();
-            datagrid.ItemsSource = contex.Books.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string serch = Txtext.Text;
+            List<Book> books = BusinessLibraryEntities.GetContex().Books.ToList();
+            books = books.Where(a => a.Name.ToLower().Contains(serch.ToLower())).ToList();
+            datagrid.ItemsSource = books.ToList();
+        }
+
+        private void Btn_add_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new AddPages.Pbook());
+        }
+
+        private void Btn_delete_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

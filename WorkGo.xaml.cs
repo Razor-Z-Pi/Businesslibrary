@@ -34,12 +34,12 @@ namespace CourseLibrary
 
         private void Btn_avtor_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new Avtor());
+            AddFrame.frame.Navigate(new Pages.Avtor());
         }
 
         private void Btn_genre_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new Genre());
+            AddFrame.frame.Navigate(new Pages.Genre());
         }
 
         private void Btn_student_Click(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace CourseLibrary
 
         private void Btn_address_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new Address());
+            AddFrame.frame.Navigate(new Pages.Address());
         }
 
         private void Btn_acountin_Click(object sender, RoutedEventArgs e)
@@ -59,7 +59,7 @@ namespace CourseLibrary
 
         private void Btn_profer_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new Profer());
+            AddFrame.frame.Navigate(new Pages.Profer());
         }
     }
 }

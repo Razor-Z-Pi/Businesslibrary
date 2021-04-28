@@ -67,6 +67,30 @@
     <Compile Include="Accounting.cs">
       <DependentUpon>ModelLibrary.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddPages\PAccounting.xaml.cs">
+      <DependentUpon>PAccounting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PAddress.xaml.cs">
+      <DependentUpon>PAddress.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PAvtor.xaml.cs">
+      <DependentUpon>PAvtor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PAvtorization.xaml.cs">
+      <DependentUpon>PAvtorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\Pbook.xaml.cs">
+      <DependentUpon>Pbook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PGenre.xaml.cs">
+      <DependentUpon>PGenre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PProfer.xaml.cs">
+      <DependentUpon>PProfer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddPages\PStudent.xaml.cs">
+      <DependentUpon>PStudent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Address.cs">
       <DependentUpon>ModelLibrary.tt</DependentUpon>
     </Compile>
@@ -121,6 +145,38 @@
     <Compile Include="WorkGo.xaml.cs">
       <DependentUpon>WorkGo.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddPages\PAccounting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PAddress.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PAvtor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PAvtorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\Pbook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PGenre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PProfer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddPages\PStudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

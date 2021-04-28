@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseLibrary.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,28 @@ namespace CourseLibrary.Pages
     /// </summary>
     public partial class Profer : Page
     {
-        BusinessLibraryEntities contex; // Обьявление БД
         public Profer()
         {
             InitializeComponent();
-            contex = new BusinessLibraryEntities();
-            datagrid.ItemsSource = contex.Profer.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Profer.ToList();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string serch = Txtext.Text;
+            List<CourseLibrary.Profer> profers = BusinessLibraryEntities.GetContex().Profer.ToList();
+            profers = profers.Where(a => a.Name.ToLower().Contains(serch.ToLower())).ToList();
+            datagrid.ItemsSource = profers.ToList();
+        }
+
+        private void Btn_add_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new AddPages.PProfer());
+        }
+
+        private void Btn_delete_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

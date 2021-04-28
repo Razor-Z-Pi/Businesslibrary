@@ -22,6 +22,5 @@
         <Style TargetType="Border">
             <Setter Property="CornerRadius" Value="12"></Setter>
         </Style>
-
     </Application.Resources>
 </Application>
