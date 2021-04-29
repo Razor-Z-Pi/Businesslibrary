@@ -27,7 +27,7 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="avtor" MaxLength="60"></TextBox>
+                <TextBox Text="{Binding Name}" TextAlignment="Center" Width="200" x:Name="avtor" MaxLength="60"></TextBox>
             </StackPanel>
         </StackPanel>
 
