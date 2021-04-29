@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseLibrary.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,51 @@ namespace CourseLibrary.AddPages
     /// </summary>
     public partial class PGenre : Page
     {
-        public PGenre()
+
+        private Genre _contex = new Genre();
+
+        public PGenre(Genre selectedGenre)
         {
             InitializeComponent();
+
+            if (selectedGenre != null)
+            {
+                _contex = selectedGenre;
+            }
+
+            DataContext = _contex;
         }
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder errors = new StringBuilder();
 
+            if (string.IsNullOrWhiteSpace(_contex.Name))
+            {
+                errors.AppendLine("Укажите название жанра");
+            }
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString());
+                return;
+            }
+
+            if (_contex.id_Genre == 0)
+            {
+                BusinessLibraryEntities.GetContex().Genre.Add(_contex);
+            }
+
+            try
+            {
+                BusinessLibraryEntities.GetContex().SaveChanges();
+                MessageBox.Show("Информацию сохранена!!!");
+                AddFrame.frame.GoBack();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

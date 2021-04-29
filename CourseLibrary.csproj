@@ -272,6 +272,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon\free-icon-library-1818714.png" />
+    <Resource Include="images\pngwing.com.png" />
     <Content Include="ModelLibrary.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelLibrary.edmx</DependentUpon>

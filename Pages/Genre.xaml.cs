@@ -24,7 +24,7 @@ namespace CourseLibrary.Pages
         public Genre()
         {
             InitializeComponent();
-            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
+            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,12 +37,42 @@ namespace CourseLibrary.Pages
 
         private void Btn_add_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new AddPages.PGenre());
+            AddFrame.frame.Navigate(new AddPages.PGenre(null));
         }
 
         private void Btn_delete_Click(object sender, RoutedEventArgs e)
         {
+            var genreForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Genre>().ToList(); //Выделение полей для удаления 
 
+            if (MessageBox.Show($"Вы точно хотите удалить следущие {genreForRemoving.Count()} Элементов???", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    BusinessLibraryEntities.GetContex().Genre.RemoveRange(genreForRemoving);
+                    BusinessLibraryEntities.GetContex().SaveChanges();
+                    MessageBox.Show("Данные удалены!!!");
+
+                    datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                BusinessLibraryEntities.GetContex().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
+            }
+        }
+
+        private void Btn_bild_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new AddPages.PGenre((sender as Button).DataContext as CourseLibrary.Genre));
         }
     }
 }
