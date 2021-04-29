@@ -20,7 +20,6 @@
           <ScalarProperty Name="id_Address" ColumnName="id_Address" />
           <ScalarProperty Name="Strets" ColumnName="Strets" />
           <ScalarProperty Name="Home" ColumnName="Home" />
-          <ScalarProperty Name="Kv" ColumnName="Kv" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -24,7 +24,7 @@ namespace CourseLibrary.Pages
         public Avtor()
         {
             InitializeComponent();
-            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Avtor.ToList();
+            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Avtor.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

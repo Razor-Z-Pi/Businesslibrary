@@ -20,9 +20,8 @@
       <PropertyRef Name="id_Address" />
     </Key>
     <Property Name="id_Address" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Strets" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
-    <Property Name="Home" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
-    <Property Name="Kv" Type="Int32" />
+    <Property Name="Strets" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Home" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Students" Relationship="Self.FK_Student_Address" FromRole="Address" ToRole="Student" />
   </EntityType>
   <EntityType Name="Avtor">

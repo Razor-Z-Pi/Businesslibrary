@@ -33,30 +33,18 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="2">
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBlock TextAlignment="Center" Text="Квартира"></TextBlock>
-            </StackPanel>
-        </StackPanel>
-
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="strets" MaxLength="35"></TextBox>
+                <TextBox Text="{Binding Strets}" TextAlignment="Center" Width="200" x:Name="strets" MaxLength="35"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="home" MaxLength="5"></TextBox>
+                <TextBox Text="{Binding Home}" TextAlignment="Center" Width="200" x:Name="home" MaxLength="5"></TextBox>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="2">
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="kv" MaxLength="3"></TextBox>
-            </StackPanel>
-        </StackPanel>
-        
         <Button Grid.ColumnSpan="2" Grid.Row="3" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click"></Button>
     </Grid>
 </Page>

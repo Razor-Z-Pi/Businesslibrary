@@ -17,9 +17,8 @@
       <PropertyRef Name="id_Address" />
     </Key>
     <Property Name="id_Address" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Strets" Type="nvarchar" MaxLength="35" />
-    <Property Name="Home" Type="nchar" MaxLength="5" />
-    <Property Name="Kv" Type="int" />
+    <Property Name="Strets" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="Home" Type="nvarchar" MaxLength="3" Nullable="false" />
   </EntityType>
   <EntityType Name="Avtor">
     <Key>
