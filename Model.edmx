@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище BusinessLibraryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище BusinessLibraryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accounting">
           <Key>
             <PropertyRef Name="id_Accounting" />
@@ -68,7 +68,6 @@
           <Property Name="FName" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
           <Property Name="Specialty" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="id_Avtorization" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -165,18 +164,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Profer_Avtorization">
-          <End Role="Avtorization" Type="Self.Avtorization" Multiplicity="1" />
-          <End Role="Profer" Type="Self.Profer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Avtorization">
-              <PropertyRef Name="id_Avtorization" />
-            </Principal>
-            <Dependent Role="Profer">
-              <PropertyRef Name="id_Avtorization" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Student_Address">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -235,10 +222,6 @@
             <End Role="Genre" EntitySet="Genre" />
             <End Role="Book" EntitySet="Book" />
           </AssociationSet>
-          <AssociationSet Name="FK_Profer_Avtorization" Association="Self.FK_Profer_Avtorization">
-            <End Role="Avtorization" EntitySet="Avtorization" />
-            <End Role="Profer" EntitySet="Profer" />
-          </AssociationSet>
           <AssociationSet Name="FK_Student_Address" Association="Self.FK_Student_Address">
             <End Role="Address" EntitySet="Address" />
             <End Role="Student" EntitySet="Student" />
@@ -248,8 +231,7 @@
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BusinessLibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -294,7 +276,6 @@
           <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="id_Pofer" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Profer" Relationship="Self.FK_Avtorization_Profer" FromRole="Avtorization" ToRole="Profer" />
-          <NavigationProperty Name="Profers" Relationship="Self.FK_Profer_Avtorization" FromRole="Avtorization" ToRole="Profer" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -328,10 +309,8 @@
           <Property Name="FName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LName" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Specialty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="id_Avtorization" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Accountings" Relationship="Self.FK_Accounting_Profer" FromRole="Profer" ToRole="Accounting" />
           <NavigationProperty Name="Avtorizations" Relationship="Self.FK_Avtorization_Profer" FromRole="Profer" ToRole="Avtorization" />
-          <NavigationProperty Name="Avtorization" Relationship="Self.FK_Profer_Avtorization" FromRole="Profer" ToRole="Avtorization" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -431,18 +410,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Profer_Avtorization">
-          <End Role="Avtorization" Type="Self.Avtorization" Multiplicity="1" />
-          <End Role="Profer" Type="Self.Profer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Avtorization">
-              <PropertyRef Name="id_Avtorization" />
-            </Principal>
-            <Dependent Role="Profer">
-              <PropertyRef Name="id_Avtorization" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Book_Genre">
           <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
           <End Role="Book" Type="Self.Book" Multiplicity="*" />
@@ -500,10 +467,6 @@
           <AssociationSet Name="FK_Avtorization_Profer" Association="Self.FK_Avtorization_Profer">
             <End Role="Profer" EntitySet="Profers" />
             <End Role="Avtorization" EntitySet="Avtorizations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Profer_Avtorization" Association="Self.FK_Profer_Avtorization">
-            <End Role="Avtorization" EntitySet="Avtorizations" />
-            <End Role="Profer" EntitySet="Profers" />
           </AssociationSet>
           <AssociationSet Name="FK_Book_Genre" Association="Self.FK_Book_Genre">
             <End Role="Genre" EntitySet="Genres" />
@@ -588,7 +551,6 @@
                 <ScalarProperty Name="FName" ColumnName="FName" />
                 <ScalarProperty Name="LName" ColumnName="LName" />
                 <ScalarProperty Name="Specialty" ColumnName="Specialty" />
-                <ScalarProperty Name="id_Avtorization" ColumnName="id_Avtorization" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

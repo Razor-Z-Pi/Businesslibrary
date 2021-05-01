@@ -26,12 +26,10 @@ namespace CourseLibrary
         public string FName { get; set; }
         public string LName { get; set; }
         public string Specialty { get; set; }
-        public int id_Avtorization { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accounting> Accountings { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Avtorization> Avtorizations { get; set; }
-        public virtual Avtorization Avtorization { get; set; }
     }
 }

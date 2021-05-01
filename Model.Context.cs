@@ -15,10 +15,6 @@ namespace CourseLibrary
     
     public partial class BusinessLibraryEntities : DbContext
     {
-        /// <summary>
-        ///  Создание экземпляра класса Библиотеки Enitiy Fraemwork для БД Библиотеки
-        /// </summary>
-        /// 
 
         private static BusinessLibraryEntities _contex;
 
@@ -27,14 +23,7 @@ namespace CourseLibrary
         {
         }
 
-        /// <summary>
-        /// Если модель не существует то пересоздаём, собственно модель
-        /// В конце возращаем переменную с данными о самой БД
-        /// </summary>
-        /// <returns></returns>
-        /// 
-
-        public static BusinessLibraryEntities GetContex()
+         public static BusinessLibraryEntities GetContex()
         {
             if (_contex == null)
             {
@@ -43,11 +32,7 @@ namespace CourseLibrary
 
             return _contex;
         }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
+   
     
         public virtual DbSet<Accounting> Accounting { get; set; }
         public virtual DbSet<Address> Address { get; set; }

@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="daba9f4eca584e50b1f46dbdc0e24e47" Name="Diagram1">
-        <EntityTypeShape EntityType="BusinessLibraryModel.Accounting" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLibraryModel.Accounting" Width="1.5" PointX="5.625" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Address" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Avtor" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Avtorization" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
@@ -20,7 +20,6 @@
         <AssociationConnector Association="BusinessLibraryModel.FK_Student_Address" ManuallyRouted="false" />
         <AssociationConnector Association="BusinessLibraryModel.FK_Book_Avtor" ManuallyRouted="false" />
         <AssociationConnector Association="BusinessLibraryModel.FK_Avtorization_Profer" ManuallyRouted="false" />
-        <AssociationConnector Association="BusinessLibraryModel.FK_Profer_Avtorization" ManuallyRouted="false" />
         <AssociationConnector Association="BusinessLibraryModel.FK_Book_Genre" ManuallyRouted="false" />
         <AssociationConnector Association="BusinessLibraryModel.FK_Student_Book" ManuallyRouted="false" />
       </Diagram>

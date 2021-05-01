@@ -63,7 +63,6 @@
     <Property Name="FName" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
     <Property Name="Specialty" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="id_Avtorization" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Student">
     <Key>
@@ -160,18 +159,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Profer_Avtorization">
-    <End Role="Avtorization" Type="Self.Avtorization" Multiplicity="1" />
-    <End Role="Profer" Type="Self.Profer" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Avtorization">
-        <PropertyRef Name="id_Avtorization" />
-      </Principal>
-      <Dependent Role="Profer">
-        <PropertyRef Name="id_Avtorization" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Student_Address">
     <End Role="Address" Type="Self.Address" Multiplicity="1" />
     <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -229,10 +216,6 @@
     <AssociationSet Name="FK_Book_Genre" Association="Self.FK_Book_Genre">
       <End Role="Genre" EntitySet="Genre" />
       <End Role="Book" EntitySet="Book" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Profer_Avtorization" Association="Self.FK_Profer_Avtorization">
-      <End Role="Avtorization" EntitySet="Avtorization" />
-      <End Role="Profer" EntitySet="Profer" />
     </AssociationSet>
     <AssociationSet Name="FK_Student_Address" Association="Self.FK_Student_Address">
       <End Role="Address" EntitySet="Address" />

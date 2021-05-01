@@ -47,46 +47,27 @@
             </StackPanel>
         </StackPanel>
 
-
-        <StackPanel Grid.Column="0" Grid.Row="4">
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBlock TextAlignment="Center" Text="id_Авторизация"></TextBlock>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="4">
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="NameB"></TextBox>
-            </StackPanel>
-        </StackPanel>
-
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="Name"></TextBox>
+                <TextBox Text="{Binding Name}" TextAlignment="Center" Width="200" x:Name="Name"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="FName"></TextBox>
+                <TextBox Text="{Binding FName}" TextAlignment="Center" Width="200" x:Name="FName"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="LName"></TextBox>
+                <TextBox Text="{Binding LName}" TextAlignment="Center" Width="200" x:Name="LName"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="3">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="Specialty"></TextBox>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="4">
-            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_avtorization"></ComboBox>
+                <TextBox Text="{Binding Specialty}" TextAlignment="Center" Width="200" x:Name="Specialty"></TextBox>
             </StackPanel>
         </StackPanel>
 

@@ -14,19 +14,11 @@ namespace CourseLibrary
     
     public partial class Avtorization
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Avtorization()
-        {
-            this.Profers = new HashSet<Profer>();
-        }
-    
         public int id_Avtorization { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public int id_Pofer { get; set; }
     
         public virtual Profer Profer { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Profer> Profers { get; set; }
     }
 }

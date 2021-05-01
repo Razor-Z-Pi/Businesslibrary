@@ -69,7 +69,6 @@
           <ScalarProperty Name="FName" ColumnName="FName" />
           <ScalarProperty Name="LName" ColumnName="LName" />
           <ScalarProperty Name="Specialty" ColumnName="Specialty" />
-          <ScalarProperty Name="id_Avtorization" ColumnName="id_Avtorization" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
