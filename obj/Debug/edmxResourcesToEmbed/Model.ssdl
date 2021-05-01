@@ -10,13 +10,13 @@
     <Property Name="id_Book" Type="int" Nullable="false" />
     <Property Name="DateOfIssue" Type="date" Nullable="false" />
     <Property Name="DateOfAdoption" Type="date" />
-    <Property Name="NumberOfBooks" Type="int" Nullable="false" />
+    <Property Name="NumberOfBooks" Type="nchar" MaxLength="3" Nullable="false" />
   </EntityType>
   <EntityType Name="Address">
     <Key>
       <PropertyRef Name="id_Address" />
     </Key>
-    <Property Name="id_Address" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Address" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Strets" Type="nvarchar" MaxLength="35" Nullable="false" />
     <Property Name="Home" Type="nvarchar" MaxLength="3" Nullable="false" />
   </EntityType>
@@ -24,23 +24,23 @@
     <Key>
       <PropertyRef Name="id_Avtor" />
     </Key>
-    <Property Name="id_Avtor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Avtor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="60" Nullable="false" />
   </EntityType>
   <EntityType Name="Avtorization">
     <Key>
       <PropertyRef Name="id_Avtorization" />
     </Key>
-    <Property Name="id_Avtorization" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Avtorization" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Login" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
-    <Property Name="id_Profer" Type="int" Nullable="false" />
+    <Property Name="id_Pofer" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Book">
     <Key>
       <PropertyRef Name="id_Book" />
     </Key>
-    <Property Name="id_Book" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Book" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="id_Genre" Type="int" Nullable="false" />
     <Property Name="id_Avtor" Type="int" Nullable="false" />
@@ -51,14 +51,14 @@
     <Key>
       <PropertyRef Name="id_Genre" />
     </Key>
-    <Property Name="id_Genre" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Genre" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Profer">
     <Key>
       <PropertyRef Name="id_Profer" />
     </Key>
-    <Property Name="id_Profer" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Profer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="35" Nullable="false" />
     <Property Name="FName" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
@@ -69,7 +69,7 @@
     <Key>
       <PropertyRef Name="id_Student" />
     </Key>
-    <Property Name="id_Student" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_Student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="FName" Type="nvarchar" MaxLength="40" Nullable="false" />
     <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
@@ -132,7 +132,7 @@
         <PropertyRef Name="id_Profer" />
       </Principal>
       <Dependent Role="Avtorization">
-        <PropertyRef Name="id_Profer" />
+        <PropertyRef Name="id_Pofer" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -172,7 +172,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Student_Address1">
+  <Association Name="FK_Student_Address">
     <End Role="Address" Type="Self.Address" Multiplicity="1" />
     <End Role="Student" Type="Self.Student" Multiplicity="*" />
     <ReferentialConstraint>
@@ -234,7 +234,7 @@
       <End Role="Avtorization" EntitySet="Avtorization" />
       <End Role="Profer" EntitySet="Profer" />
     </AssociationSet>
-    <AssociationSet Name="FK_Student_Address1" Association="Self.FK_Student_Address1">
+    <AssociationSet Name="FK_Student_Address" Association="Self.FK_Student_Address">
       <End Role="Address" EntitySet="Address" />
       <End Role="Student" EntitySet="Student" />
     </AssociationSet>

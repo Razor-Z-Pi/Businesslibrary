@@ -24,7 +24,7 @@ namespace CourseLibrary.Pages
         public Books1()
         {
             InitializeComponent();
-            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
+            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,12 +37,42 @@ namespace CourseLibrary.Pages
 
         private void Btn_add_Click(object sender, RoutedEventArgs e)
         {
-            AddFrame.frame.Navigate(new AddPages.Pbook());
+            AddFrame.frame.Navigate(new AddPages.Pbook(null));
         }
 
         private void Btn_delete_Click(object sender, RoutedEventArgs e)
         {
+            var ForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Book>().ToList(); //Выделение полей для удаления 
 
+            if (MessageBox.Show($"Вы точно хотите удалить следущие {ForRemoving.Count()} Элементов???", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    BusinessLibraryEntities.GetContex().Books.RemoveRange(ForRemoving);
+                    BusinessLibraryEntities.GetContex().SaveChanges();
+                    MessageBox.Show("Данные удалены!!!");
+
+                    datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                BusinessLibraryEntities.GetContex().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
+            }
+        }
+
+        private void btn_bild_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new AddPages.Pbook((sender as Button).DataContext as CourseLibrary.Book));
         }
     }
 }

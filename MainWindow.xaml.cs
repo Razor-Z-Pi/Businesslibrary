@@ -101,7 +101,7 @@ namespace CourseLibrary
                     else
                     {
                         var user = "";
-                        if (userObj.id_Profer == profer.id_Profer) // Сравниваем в БД Данные Руководителей
+                        if (userObj.id_Pofer == profer.id_Profer) // Сравниваем в БД Данные Руководителей
                         {
                             user = profer.Name + " " + profer.FName + " " + profer.LName; // Создали ранее переменную в которую сложим ФИО Руково-лей
                         }

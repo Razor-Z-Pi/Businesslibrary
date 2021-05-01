@@ -24,13 +24,13 @@ namespace CourseLibrary.Pages
         public Students()
         {
             InitializeComponent();
-            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Students.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Student.ToList();
         }
 
         private void Txtext_TextChanged(object sender, TextChangedEventArgs e)
         {
             string serch = Txtext.Text;
-            List<Student> stud = BusinessLibraryEntities.GetContex().Students.ToList();
+            List<Student> stud = BusinessLibraryEntities.GetContex().Student.ToList();
             stud = stud.Where(a => a.Name.ToLower().Contains(serch.ToLower())).ToList();
             datagrid.ItemsSource = stud.ToList();
         }

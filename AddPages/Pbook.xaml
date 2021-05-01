@@ -55,31 +55,31 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="NameB"></TextBox>
+                <TextBox Text="{Binding Name}" TextAlignment="Center" Width="200" x:Name="NameB"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_genre"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Genre}" DisplayMemberPath="Name" Width="200" x:Name="cmb_genre"></ComboBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_avtor"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Avtor}" DisplayMemberPath="Name" Width="200" x:Name="cmb_avtor"></ComboBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="3">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="numberoflines"></TextBox>
+                <TextBox Text="{Binding NumberOfLines}" TextAlignment="Center" Width="200" x:Name="numberoflines"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="4">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="amount"></TextBox>
+                <TextBox Text="{Binding Amount}" TextAlignment="Center" Width="200" x:Name="amount"></TextBox>
             </StackPanel>
         </StackPanel>
 

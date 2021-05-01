@@ -69,3 +69,42 @@ C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddP
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\Pbook.baml
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PGenre.baml
 C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PProfer.baml
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.dll
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.dll
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.xml
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.xml
+J:\CourseLibrary\Git\bin\Debug\ru\EntityFramework.resources.dll
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAddress.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\Pbook.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PGenre.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PProfer.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PStudent.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Acounting.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Address.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtor.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Books1.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Genre.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Profer.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Students.g.cs
+J:\CourseLibrary\Git\obj\Debug\WorkGo.g.cs
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_Content.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAddress.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\Pbook.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PGenre.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PProfer.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PStudent.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Acounting.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Address.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtor.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Books1.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Genre.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Profer.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Students.baml
+J:\CourseLibrary\Git\obj\Debug\WorkGo.baml
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete

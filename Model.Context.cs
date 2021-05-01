@@ -15,12 +15,24 @@ namespace CourseLibrary
     
     public partial class BusinessLibraryEntities : DbContext
     {
+        /// <summary>
+        ///  Создание экземпляра класса Библиотеки Enitiy Fraemwork для БД Библиотеки
+        /// </summary>
+        /// 
+
         private static BusinessLibraryEntities _contex;
 
         public BusinessLibraryEntities()
             : base("name=BusinessLibraryEntities")
         {
         }
+
+        /// <summary>
+        /// Если модель не существует то пересоздаём, собственно модель
+        /// В конце возращаем переменную с данными о самой БД
+        /// </summary>
+        /// <returns></returns>
+        /// 
 
         public static BusinessLibraryEntities GetContex()
         {
@@ -44,7 +56,7 @@ namespace CourseLibrary
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Genre> Genre { get; set; }
         public virtual DbSet<Profer> Profer { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

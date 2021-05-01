@@ -23,7 +23,6 @@ namespace CourseLibrary
         public int id_Address { get; set; }
         public string Strets { get; set; }
         public string Home { get; set; }
-        public Nullable<int> Kv { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Students { get; set; }

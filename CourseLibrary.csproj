@@ -65,8 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Accounting.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddPages\id_Address.cs" />
     <Compile Include="AddPages\PAccounting.xaml.cs">
       <DependentUpon>PAccounting.xaml</DependentUpon>
     </Compile>
@@ -92,25 +93,35 @@
       <DependentUpon>PStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="Address.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Avtor.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Avtorization.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Book.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\AddFrame.cs" />
     <Compile Include="Genre.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModelLibrary.cs">
+    <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Acounting.xaml.cs">
       <DependentUpon>Acounting.xaml</DependentUpon>
@@ -134,13 +145,13 @@
       <DependentUpon>Students.xaml</DependentUpon>
     </Compile>
     <Compile Include="Profer.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelLibrary.tt</DependentUpon>
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkGo.xaml.cs">
       <DependentUpon>WorkGo.xaml</DependentUpon>
@@ -223,16 +234,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelLibrary.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibrary.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelLibrary.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelLibrary.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -250,12 +251,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelLibrary.edmx">
+    <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelLibrary.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModelLibrary.edmx.diagram">
-      <DependentUpon>ModelLibrary.edmx</DependentUpon>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -266,26 +267,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="images\book.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon\free-icon-library-1818714.png" />
     <Resource Include="images\pngwing.com.png" />
-    <Content Include="ModelLibrary.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelLibrary.edmx</DependentUpon>
-      <LastGenOutput>ModelLibrary.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelLibrary.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelLibrary.edmx</DependentUpon>
-      <LastGenOutput>ModelLibrary.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

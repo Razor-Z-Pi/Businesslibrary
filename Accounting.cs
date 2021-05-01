@@ -20,7 +20,7 @@ namespace CourseLibrary
         public int id_Book { get; set; }
         public System.DateTime DateOfIssue { get; set; }
         public Nullable<System.DateTime> DateOfAdoption { get; set; }
-        public int NumberOfBooks { get; set; }
+        public string NumberOfBooks { get; set; }
     
         public virtual Book Book { get; set; }
         public virtual Profer Profer { get; set; }

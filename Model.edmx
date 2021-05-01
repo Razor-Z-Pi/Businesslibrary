@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище BusinessLibraryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище BusinessLibraryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accounting">
           <Key>
             <PropertyRef Name="id_Accounting" />
@@ -15,7 +15,7 @@
           <Property Name="id_Book" Type="int" Nullable="false" />
           <Property Name="DateOfIssue" Type="date" Nullable="false" />
           <Property Name="DateOfAdoption" Type="date" />
-          <Property Name="NumberOfBooks" Type="int" Nullable="false" />
+          <Property Name="NumberOfBooks" Type="nchar" MaxLength="3" Nullable="false" />
         </EntityType>
         <EntityType Name="Address">
           <Key>
@@ -39,7 +39,7 @@
           <Property Name="id_Avtorization" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
-          <Property Name="id_Profer" Type="int" Nullable="false" />
+          <Property Name="id_Pofer" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Book">
           <Key>
@@ -49,8 +49,8 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="id_Genre" Type="int" Nullable="false" />
           <Property Name="id_Avtor" Type="int" Nullable="false" />
-          <Property Name="NumberOfLines" Type="int" Nullable="false" />
-          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="NumberOfLines" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <EntityType Name="Genre">
           <Key>
@@ -137,7 +137,7 @@
               <PropertyRef Name="id_Profer" />
             </Principal>
             <Dependent Role="Avtorization">
-              <PropertyRef Name="id_Profer" />
+              <PropertyRef Name="id_Pofer" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -177,7 +177,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_Address1">
+        <Association Name="FK_Student_Address">
           <End Role="Address" Type="Self.Address" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -239,7 +239,7 @@
             <End Role="Avtorization" EntitySet="Avtorization" />
             <End Role="Profer" EntitySet="Profer" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_Address1" Association="Self.FK_Student_Address1">
+          <AssociationSet Name="FK_Student_Address" Association="Self.FK_Student_Address">
             <End Role="Address" EntitySet="Address" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
@@ -248,7 +248,8 @@
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BusinessLibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -262,7 +263,7 @@
           <Property Name="id_Book" Type="Int32" Nullable="false" />
           <Property Name="DateOfIssue" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="DateOfAdoption" Type="DateTime" Precision="0" />
-          <Property Name="NumberOfBooks" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfBooks" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Book" Relationship="Self.FK_Accounting_Book" FromRole="Accounting" ToRole="Book" />
           <NavigationProperty Name="Profer" Relationship="Self.FK_Accounting_Profer" FromRole="Accounting" ToRole="Profer" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Accounting_Student" FromRole="Accounting" ToRole="Student" />
@@ -291,7 +292,7 @@
           <Property Name="id_Avtorization" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Login" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="id_Profer" Type="Int32" Nullable="false" />
+          <Property Name="id_Pofer" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Profer" Relationship="Self.FK_Avtorization_Profer" FromRole="Avtorization" ToRole="Profer" />
           <NavigationProperty Name="Profers" Relationship="Self.FK_Profer_Avtorization" FromRole="Avtorization" ToRole="Profer" />
         </EntityType>
@@ -303,8 +304,8 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="id_Genre" Type="Int32" Nullable="false" />
           <Property Name="id_Avtor" Type="Int32" Nullable="false" />
-          <Property Name="NumberOfLines" Type="Int32" Nullable="false" />
-          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="NumberOfLines" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Amount" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Accountings" Relationship="Self.FK_Accounting_Book" FromRole="Book" ToRole="Accounting" />
           <NavigationProperty Name="Avtor" Relationship="Self.FK_Book_Avtor" FromRole="Book" ToRole="Avtor" />
           <NavigationProperty Name="Genre" Relationship="Self.FK_Book_Genre" FromRole="Book" ToRole="Genre" />
@@ -426,7 +427,7 @@
               <PropertyRef Name="id_Profer" />
             </Principal>
             <Dependent Role="Avtorization">
-              <PropertyRef Name="id_Profer" />
+              <PropertyRef Name="id_Pofer" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -555,7 +556,7 @@
                 <ScalarProperty Name="id_Avtorization" ColumnName="id_Avtorization" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="id_Profer" ColumnName="id_Profer" />
+                <ScalarProperty Name="id_Pofer" ColumnName="id_Pofer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -25,8 +25,8 @@ namespace CourseLibrary
         public string Name { get; set; }
         public int id_Genre { get; set; }
         public int id_Avtor { get; set; }
-        public int NumberOfLines { get; set; }
-        public int Amount { get; set; }
+        public string NumberOfLines { get; set; }
+        public string Amount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Accounting> Accountings { get; set; }

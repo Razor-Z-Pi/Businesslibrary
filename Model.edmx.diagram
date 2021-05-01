@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2457147bbb7a4f45957125a6972c8f44" Name="Diagram1">
-        <EntityTypeShape EntityType="BusinessLibraryModel.Accounting" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+      <Diagram DiagramId="daba9f4eca584e50b1f46dbdc0e24e47" Name="Diagram1">
+        <EntityTypeShape EntityType="BusinessLibraryModel.Accounting" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Address" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BusinessLibraryModel.Avtor" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLibraryModel.Avtor" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Avtorization" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BusinessLibraryModel.Book" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BusinessLibraryModel.Genre" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLibraryModel.Book" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessLibraryModel.Genre" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Profer" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.Student" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BusinessLibraryModel.sysdiagram" Width="1.5" PointX="5.75" PointY="8.875" IsExpanded="true" />
