@@ -62,37 +62,37 @@
             
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_profer"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Profer}" DisplayMemberPath="Name" Width="200" x:Name="cmb_profer"></ComboBox>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_stud"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Student}" DisplayMemberPath="Name" Width="200" x:Name="cmb_stud"></ComboBox>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="2">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_book"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Book}" DisplayMemberPath="Name" Width="200" x:Name="cmb_book"></ComboBox>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="3">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="DataF"></TextBox>
+                <DatePicker SelectedDate="{Binding DateOfIssue}"  Width="200" x:Name="DataF"></DatePicker>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="4">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="DataAdd"></TextBox>
+                <DatePicker SelectedDate="{Binding DateOfAdoption}"  Width="200" x:Name="DataAdd"></DatePicker>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="5">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="Numberbook"></TextBox>
+                <TextBox Text="{Binding NumberOfBooks}" TextAlignment="Center" Width="200" x:Name="Numberbook"></TextBox>
             </StackPanel>
         </StackPanel>
         
