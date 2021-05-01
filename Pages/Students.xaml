@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:CourseLibrary.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Students">
+      Title="Students" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0" Orientation="Horizontal">
@@ -27,7 +27,7 @@
                     <DataGridTemplateColumn Width="auto">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Редактировать" x:Name="btn_bild"></Button>
+                                <Button Content="Редактировать" x:Name="btn_bild" Click="btn_bild_Click"></Button>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

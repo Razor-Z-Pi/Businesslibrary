@@ -23,9 +23,14 @@ namespace CourseLibrary.AddPages
     {
         private Student _contex = new Student();
 
-        public PStudent()
+        public PStudent(Student selectStud)
         {
             InitializeComponent();
+
+            if (selectStud != null)
+            {
+                _contex = selectStud;
+            }
 
             DataContext = _contex;
             CMDaddress.ItemsSource = BusinessLibraryEntities.GetContex().Address.ToList();
@@ -34,39 +39,17 @@ namespace CourseLibrary.AddPages
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder errors = new StringBuilder();
-
-            if (string.IsNullOrWhiteSpace(_contex.Name))
-            {
-                errors.AppendLine("Укажите Имя");
-            }
-
-            if (string.IsNullOrWhiteSpace(_contex.FName))
-            {
-                errors.AppendLine("Укажите Фамилию");
-            }
-
-            if (string.IsNullOrWhiteSpace(_contex.LName))
-            {
-                errors.AppendLine("Укажите Отчество");
-            }
-
-            if (errors.Length > 0)
-            {
-                MessageBox.Show(errors.ToString());
-                return;
-            }
-
-            if (_contex.id_Student == 0)
-            {
-                BusinessLibraryEntities.GetContex().Student.Add(_contex);
-            }
-
             try
             {
-                var newStudent = new Student();
-                newStudent.id_Address = Convert.ToInt32((Address)CMDaddress.SelectedItem);
-                newStudent.id_Book = Convert.ToInt32((Book)CMDbook.SelectedItem);
+                var __contex = new Student();
+                BusinessLibraryEntities.GetContex().Student.Add(__contex);
+                __contex.Name = Name.Text;
+                __contex.FName = FName.Text;
+                __contex.LName = LName.Text;
+                __contex.Pasport_seria = PsP.Text;
+                __contex.Telephone = Tel.Text;
+                __contex.Address = (Address)CMDaddress.SelectedItem;
+                __contex.Book = (Book)CMDbook.SelectedItem;
                 BusinessLibraryEntities.GetContex().SaveChanges();
                 MessageBox.Show("Информацию сохранена!!!");
                 AddFrame.frame.GoBack();
