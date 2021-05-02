@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CourseLibrary.Pages
 {
@@ -73,6 +74,52 @@ namespace CourseLibrary.Pages
         private void btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.PAccounting((sender as Button).DataContext as CourseLibrary.Accounting));
+            var ForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Accounting>().ToList(); //Выделение полей для удаления 
+            BusinessLibraryEntities.GetContex().Accounting.RemoveRange(ForRemoving);
+            BusinessLibraryEntities.GetContex().SaveChanges();
+        }
+
+        private void btn_excel_Click(object sender, RoutedEventArgs e)
+        {
+            var allusers = BusinessLibraryEntities.GetContex().Accounting.ToList().OrderBy(p => p.DateOfIssue).ToList();
+
+            var aplication = new Excel.Application();
+            aplication.SheetsInNewWorkbook = allusers.Count();
+
+            Excel.Workbook workbook = aplication.Workbooks.Add(Type.Missing);
+
+            int StartRowIndex = 1;
+
+            for (int i = 0; i < allusers.Count(); i++)
+            {
+                Excel.Worksheet worksheets = aplication.Worksheets.Item[i + 1];
+                worksheets.Name = allusers[i].NumberOfBooks;
+
+                worksheets.Cells[1][StartRowIndex] = "Руководитель";
+                worksheets.Cells[2][StartRowIndex] = "Студент";
+                worksheets.Cells[3][StartRowIndex] = "Книга";
+                worksheets.Cells[4][StartRowIndex] = "Дата выдачи";
+                worksheets.Cells[5][StartRowIndex] = "Дата принятия";
+                worksheets.Cells[6][StartRowIndex] = "Количество книг";
+
+                StartRowIndex++;
+
+                foreach (var date in BusinessLibraryEntities.GetContex().Accounting)
+                {
+                    worksheets.Cells[1][StartRowIndex] = date.Profer.Name;
+                    worksheets.Cells[2][StartRowIndex] = date.Student.Name;
+                    worksheets.Cells[3][StartRowIndex] = date.Book.Name;
+                    worksheets.Cells[4][StartRowIndex] = date.DateOfIssue.ToString("dd.MM.yyyy HH:mm"); 
+                    worksheets.Cells[5][StartRowIndex] = date.DateOfAdoption;
+                    worksheets.Cells[6][StartRowIndex] = date.NumberOfBooks;
+
+                    StartRowIndex++;
+                }
+
+                worksheets.Columns.AutoFit();
+            }
+
+            aplication.Visible = true;
         }
     }
 }

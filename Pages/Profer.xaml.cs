@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CourseLibrary.Pages
 {
@@ -73,6 +74,45 @@ namespace CourseLibrary.Pages
         private void btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.PProfer((sender as Button).DataContext as CourseLibrary.Profer));
+        }
+
+        private void btn_excel_Click(object sender, RoutedEventArgs e)
+        {
+            var allusers = BusinessLibraryEntities.GetContex().Profer.ToList().OrderBy(p => p.FName).ToList();
+
+            var aplication = new Excel.Application();
+            aplication.SheetsInNewWorkbook = allusers.Count();
+
+            Excel.Workbook workbook = aplication.Workbooks.Add(Type.Missing);
+
+            int StartRowIndex = 1;
+
+            for (int i = 0; i < allusers.Count(); i++)
+            {
+                Excel.Worksheet worksheets = aplication.Worksheets.Item[i + 1];
+                worksheets.Name = allusers[i].FName;
+
+                worksheets.Cells[1][StartRowIndex] = "Имя";
+                worksheets.Cells[2][StartRowIndex] = "Фамилия";
+                worksheets.Cells[3][StartRowIndex] = "Отчество";
+                worksheets.Cells[4][StartRowIndex] = "Специальность";
+
+                StartRowIndex++;
+
+                foreach (var date in BusinessLibraryEntities.GetContex().Profer)
+                {
+                    worksheets.Cells[1][StartRowIndex] = date.Name;
+                    worksheets.Cells[2][StartRowIndex] = date.FName;
+                    worksheets.Cells[3][StartRowIndex] = date.LName;
+                    worksheets.Cells[4][StartRowIndex] = date.Specialty;
+
+                    StartRowIndex++;
+                }
+
+                worksheets.Columns.AutoFit();
+            }
+
+            aplication.Visible = true;
         }
     }
 }

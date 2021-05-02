@@ -108,3 +108,8 @@ J:\CourseLibrary\Git\obj\Debug\Pages\Profer.baml
 J:\CourseLibrary\Git\obj\Debug\Pages\Students.baml
 J:\CourseLibrary\Git\obj\Debug\WorkGo.baml
 J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete
+J:\CourseLibrary\Git\obj\Debug\Interop.LCC11.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.MsoEuro.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.MsoScreenRecorderLib.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.TASKLAUNCHLib.dll
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.ResolveComReference.cache

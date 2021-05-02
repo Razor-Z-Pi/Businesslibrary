@@ -17,18 +17,24 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick">
-            <StackPanel Width="100" HorizontalAlignment="Left">
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick" Orientation="Horizontal">
+            <StackPanel Margin="14 0" Width="100" HorizontalAlignment="Left">
                 <Image Source="./icon/free-icon-library-1818714.png"></Image>
             </StackPanel>
-            <StackPanel Width="100" HorizontalAlignment="Right">
+            <TreeViewItem Margin="0 0 360 0" Foreground="WhiteSmoke" Header="Популярные сайты по книгам" Background="Transparent" BorderThickness="0" BorderBrush="Transparent">
+                <Hyperlink x:Name="next1" Click="next1_Click" Foreground="WhiteSmoke" TextDecorations="None">Bookmate</Hyperlink>
+                <Hyperlink x:Name="next2" Click="next2_Click" Foreground="WhiteSmoke" TextDecorations="None">проекта «Гутенберг»</Hyperlink>
+                <Hyperlink x:Name="next3" Click="next3_Click" Foreground="WhiteSmoke" TextDecorations="None">ImWerden</Hyperlink>
+                <Hyperlink x:Name="next4" Click="next4_Click" Foreground="WhiteSmoke" TextDecorations="None">eLIBRARY.ru</Hyperlink>
+            </TreeViewItem>
+            <StackPanel Width="100" Margin="10 0 0 0" HorizontalAlignment="Right">
                 <Image Source="./Images/pngwing.com.png" Height="109" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
-                            <SkewTransform/>
+                            <SkewTransform AngleY="-0.001"/>
                             <RotateTransform/>
-                            <TranslateTransform Y="-101.471"/>
+                            <TranslateTransform Y="0.542"/>
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
@@ -39,10 +45,14 @@
         <Frame Grid.Row="1"  Background="{StaticResource font}" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden" Height="420"></Frame>
 
 
-        <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal">
-            <Menu Background="Transparent" Foreground="WhiteSmoke">
-                <MenuItem Header="Отчёт"></MenuItem>
-                <MenuItem Header="Devops"></MenuItem>
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,779,0">
+            <Menu Background="Transparent" Foreground="WhiteSmoke" Width="111">
+                <MenuItem Foreground="WhiteSmoke" Header="Отчёт" Width="45">
+                    <MenuItem></MenuItem>
+                    <MenuItem></MenuItem>
+                    <MenuItem></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Developer" x:Name="Developer" Click="Developer_Click" Width="69" Height="17"></MenuItem>
             </Menu>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" Background="{StaticResource header-left}">

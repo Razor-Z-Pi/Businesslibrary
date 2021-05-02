@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CourseLibrary.Pages
 {
@@ -73,6 +74,42 @@ namespace CourseLibrary.Pages
         private void Btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.PAddress((sender as Button).DataContext as CourseLibrary.Address));
+        }
+
+        private void btn_excel_Click(object sender, RoutedEventArgs e)
+        {
+            var allusers = BusinessLibraryEntities.GetContex().Address.ToList().OrderBy(p => p.Strets).ToList();
+
+            var aplication = new Excel.Application();
+            aplication.SheetsInNewWorkbook = allusers.Count();
+
+            Excel.Workbook workbook = aplication.Workbooks.Add(Type.Missing);
+
+            int StartRowIndex = 1;
+
+            for (int i = 0; i < allusers.Count(); i++)
+            {
+                Excel.Worksheet worksheets = aplication.Worksheets.Item[i + 1];
+                worksheets.Name = allusers[i].Strets;
+
+                worksheets.Cells[1][StartRowIndex] = "Улица";
+                worksheets.Cells[2][StartRowIndex] = "Дом";
+  
+
+                StartRowIndex++;
+
+                foreach (var date in BusinessLibraryEntities.GetContex().Address)
+                {
+                    worksheets.Cells[1][StartRowIndex] = date.Strets;
+                    worksheets.Cells[2][StartRowIndex] = date.Home;
+
+                    StartRowIndex++;
+                }
+
+                worksheets.Columns.AutoFit();
+            }
+
+            aplication.Visible = true;
         }
     }
 }

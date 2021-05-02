@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CourseLibrary.Pages
 {
@@ -73,6 +75,50 @@ namespace CourseLibrary.Pages
         private void btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.Pbook((sender as Button).DataContext as CourseLibrary.Book));
+            var ForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Book>().ToList(); //Выделение полей для удаления 
+            BusinessLibraryEntities.GetContex().Books.RemoveRange(ForRemoving);
+            BusinessLibraryEntities.GetContex().SaveChanges(); 
+        }
+
+        private void btn_excel_Click(object sender, RoutedEventArgs e)
+        {
+            var allusers = BusinessLibraryEntities.GetContex().Books.ToList().OrderBy(p => p.Name).ToList();
+
+            var aplication = new Excel.Application();
+            aplication.SheetsInNewWorkbook = allusers.Count();
+
+            Excel.Workbook workbook = aplication.Workbooks.Add(Type.Missing);
+                
+            int StartRowIndex = 1;
+
+            for (int i = 0; i < allusers.Count(); i++)
+            {
+                Excel.Worksheet worksheets = aplication.Worksheets.Item[i+ 1];
+                worksheets.Name = allusers[i].Name;
+
+                worksheets.Cells[1][StartRowIndex] = "Имя";
+                worksheets.Cells[2][StartRowIndex] = "Жанр";
+                worksheets.Cells[3][StartRowIndex] = "Автор";
+                worksheets.Cells[4][StartRowIndex] = "Колчиство страниц в книге";
+                worksheets.Cells[5][StartRowIndex] = "Количество книг";
+
+                StartRowIndex++;
+
+                foreach (var date in BusinessLibraryEntities.GetContex().Books)
+                {
+                    worksheets.Cells[1][StartRowIndex] = date.Name;
+                    worksheets.Cells[2][StartRowIndex] = date.Genre.Name;
+                    worksheets.Cells[3][StartRowIndex] = date.Avtor.Name;
+                    worksheets.Cells[4][StartRowIndex] = date.NumberOfLines;
+                    worksheets.Cells[5][StartRowIndex] = date.Amount;   
+
+                    StartRowIndex++;
+                }
+
+                worksheets.Columns.AutoFit();
+            }
+
+            aplication.Visible = true;
         }
     }
 }

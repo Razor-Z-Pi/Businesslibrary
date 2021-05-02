@@ -10,8 +10,11 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0" Orientation="Horizontal">
-            <Button Content="Добавить" Width="100" x:Name="btn_add" Click="Btn_add_Click"></Button>
+            <Button Content="Экспорт в Excel" Margin="0 0 50 0" Width="100" x:Name="btn_excel" Click="btn_excel_Click"></Button>
+            <Button Content="Добавить" Width="100" Margin="10 0" x:Name="btn_add" Click="Btn_add_Click"></Button>
             <Button Content="Удалить" Margin="10 0"  Width="100" x:Name="btn_delete" Click="Btn_delete_Click"></Button>
+            <Label Content="Поиск по названию" Foreground="Black" Margin="10 0"></Label>
+            <Image Margin="10 0" Source="../images/loop.png" Height="30" Width="39"></Image>
             <TextBox Width="200" Height="30" TextAlignment="Center" MaxLength="30" TextChanged="TextBox_TextChanged" x:Name="Txtext"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" Margin="0 30 0 0">

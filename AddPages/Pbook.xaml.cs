@@ -30,7 +30,7 @@ namespace CourseLibrary.AddPages
 
             if (selectedBook != null)
             {
-                __contex = selectedBook;
+                selectedBook = __contex;
             }
 
             cmb_genre.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();

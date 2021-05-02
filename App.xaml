@@ -18,9 +18,5 @@
             <Setter Property="Background" Value="SeaGreen"></Setter>
             <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
         </Style>
-
-        <Style TargetType="Border">
-            <Setter Property="CornerRadius" Value="12"></Setter>
-        </Style>
     </Application.Resources>
 </Application>

@@ -61,5 +61,33 @@ namespace CourseLibrary
         {
             AddFrame.frame.Navigate(new Pages.Profer());
         }
+
+        private void Developer_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Разработчик: Попов Павел",
+                            "Внимание",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Warning);
+        }
+
+        private void next1_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://ru.bookmate.com/");
+        }
+
+        private void next2_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.gutenberg.org/");
+        }
+
+        private void next3_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://imwerden.de/");
+        }
+
+        private void next4_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.elibrary.ru/defaultx.asp?");
+        }
     }
 }
