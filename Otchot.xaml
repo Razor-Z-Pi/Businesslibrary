@@ -1,0 +1,42 @@
+﻿<Window x:Class="CourseLibrary.Otchot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseLibrary"
+        mc:Ignorable="d"
+        Title="Otchot" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="Firebrick" Grid.ColumnSpan="2">
+            <TextBlock Text="Мастер отчётов" 
+                       TextAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Margin="0 10"
+                       FontSize="32"
+                       Foreground="WhiteSmoke"
+                       FontFamily="Oswald sans-serif"></TextBlock>
+        </StackPanel>
+
+        <Border x:Name="Printers" Grid.Row="1">
+            <Frame NavigationUIVisibility="Hidden" x:Name="frmPrinter"></Frame>
+        </Border>
+
+        <Border CornerRadius="50" Grid.Row="2"  Background="{StaticResource font}">
+            <Border CornerRadius="50" Width="400" Background="{StaticResource header-left}" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400" Height="80">
+                    <Button x:Name="student" Content="Студенты" Height="30" Width="80" Margin="10 0" Click="student_Click"></Button>
+                    <Button x:Name="books" Content="Книги" Height="30" Width="80" Margin="10 0" Click="books_Click"></Button>
+                    <Button x:Name="accounting" Content="Учёт" Height="30" Width="80" Margin="10 0" Click="accounting_Click"></Button>
+                    <Button x:Name="Printer" Content="Печать" Height="30" Width="80" Margin="10 0" Click="Printer_Click"></Button>
+                </StackPanel>
+            </Border>
+        </Border>
+    </Grid>
+</Window>

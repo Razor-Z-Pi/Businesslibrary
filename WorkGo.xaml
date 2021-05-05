@@ -47,11 +47,7 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,779,0">
             <Menu Background="Transparent" Foreground="WhiteSmoke" Width="111">
-                <MenuItem Foreground="WhiteSmoke" Header="Отчёт" Width="45">
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                    <MenuItem></MenuItem>
-                </MenuItem>
+                <MenuItem x:Name="PrinterOtchet" Click="PrinterOtchet_Click" Foreground="WhiteSmoke" Header="Отчёт" Width="45"></MenuItem>
                 <MenuItem Header="Developer" x:Name="Developer" Click="Developer_Click" Width="69" Height="17"></MenuItem>
             </Menu>
         </StackPanel>

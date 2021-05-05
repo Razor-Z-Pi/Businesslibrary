@@ -26,7 +26,7 @@ namespace CourseLibrary.Pages
         public Books1()
         {
             InitializeComponent();
-            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -77,7 +77,7 @@ namespace CourseLibrary.Pages
             AddFrame.frame.Navigate(new AddPages.Pbook((sender as Button).DataContext as CourseLibrary.Book));
             var ForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Book>().ToList(); //Выделение полей для удаления 
             BusinessLibraryEntities.GetContex().Books.RemoveRange(ForRemoving);
-            BusinessLibraryEntities.GetContex().SaveChanges(); 
+            BusinessLibraryEntities.GetContex().SaveChanges();
         }
 
         private void btn_excel_Click(object sender, RoutedEventArgs e)

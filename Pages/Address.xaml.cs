@@ -25,7 +25,7 @@ namespace CourseLibrary.Pages
         public Address()
         {
             InitializeComponent();
-            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Address.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Address.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

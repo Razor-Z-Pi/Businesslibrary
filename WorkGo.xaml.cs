@@ -89,5 +89,11 @@ namespace CourseLibrary
         {
             System.Diagnostics.Process.Start("https://www.elibrary.ru/defaultx.asp?");
         }
+
+        private void PrinterOtchet_Click(object sender, RoutedEventArgs e)
+        {
+            Otchot otchot = new Otchot();
+            otchot.Show();
+        }
     }
 }

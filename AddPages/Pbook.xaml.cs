@@ -33,6 +33,8 @@ namespace CourseLibrary.AddPages
                 selectedBook = __contex;
             }
 
+            this.DataContext = selectedBook;
+
             cmb_genre.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
             cmb_avtor.ItemsSource = BusinessLibraryEntities.GetContex().Avtor.ToList();
 

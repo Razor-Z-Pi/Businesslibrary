@@ -44,8 +44,11 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,9 +58,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -122,6 +127,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Otchot.xaml.cs">
+      <DependentUpon>Otchot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesOtcoth\accountOtch.xaml.cs">
+      <DependentUpon>accountOtch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesOtcoth\bookOtch.xaml.cs">
+      <DependentUpon>bookOtch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesOtcoth\stdOtch.xaml.cs">
+      <DependentUpon>stdOtch.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Acounting.xaml.cs">
       <DependentUpon>Acounting.xaml</DependentUpon>
@@ -200,6 +217,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Otchot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesOtcoth\accountOtch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesOtcoth\bookOtch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesOtcoth\stdOtch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Acounting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

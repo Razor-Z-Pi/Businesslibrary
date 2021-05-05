@@ -113,3 +113,11 @@ J:\CourseLibrary\Git\obj\Debug\Interop.MsoEuro.dll
 J:\CourseLibrary\Git\obj\Debug\Interop.MsoScreenRecorderLib.dll
 J:\CourseLibrary\Git\obj\Debug\Interop.TASKLAUNCHLib.dll
 J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.ResolveComReference.cache
+J:\CourseLibrary\Git\obj\Debug\Otchot.g.cs
+J:\CourseLibrary\Git\obj\Debug\Otchot.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\accountOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\bookOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\accountOtch.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\bookOtch.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.baml

@@ -25,7 +25,7 @@ namespace CourseLibrary.Pages
         public Genre()
         {
             InitializeComponent();
-            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Genre.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

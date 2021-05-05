@@ -25,7 +25,7 @@ namespace CourseLibrary.Pages
         public Profer()
         {
             InitializeComponent();
-            //datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Profer.ToList();
+            datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Profer.ToList();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
