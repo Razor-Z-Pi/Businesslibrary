@@ -13,20 +13,33 @@
             <RowDefinition Height="80"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Background="Firebrick" Grid.ColumnSpan="2">
+        <!--Шапка-->
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="Firebrick" Grid.ColumnSpan="2">
+            <Button Width="185" Background="Transparent" x:Name="btnClose" Click="btnClose_Click" BorderThickness="0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="./icon/back.png" Height="43" Width="75"></Image>
+                    <TextBlock VerticalAlignment="Center" Text="Вернутся назад"></TextBlock>
+                </StackPanel>
+            </Button>
             <TextBlock Text="Мастер отчётов" 
                        TextAlignment="Center" 
                        HorizontalAlignment="Center" 
                        VerticalAlignment="Center"
-                       Margin="0 10"
+                       Margin="88 10"
                        FontSize="32"
                        Foreground="WhiteSmoke"
                        FontFamily="Oswald sans-serif"></TextBlock>
         </StackPanel>
 
+        <!--Центр, отображение данных-->
+        
         <Border x:Name="Printers" Grid.Row="1" Background="Green">
             <Frame NavigationUIVisibility="Hidden" x:Name="frmPrinter"></Frame>
         </Border>
+
+        <!--Подвал-->
+
         <StackPanel Grid.Row="2" Background="Green">
             <Border CornerRadius="50" Background="{StaticResource font}">
                 <Border CornerRadius="50" Width="400" Background="{StaticResource header-left}" >

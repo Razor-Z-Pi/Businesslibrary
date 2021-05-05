@@ -23,6 +23,10 @@ namespace CourseLibrary.AddPages
     {
         private Avtor _contex = new Avtor();
 
+        /// <summary>
+        ///  Обьявления экземпляра нужной таблицы из БД, для манипуляциями самих данных
+        /// </summary>
+
         public PAvtor(Avtor selectedAvtor)
         {
             InitializeComponent();
@@ -34,6 +38,10 @@ namespace CourseLibrary.AddPages
 
             DataContext = _contex;
         }
+
+        /// <summary>
+        /// Добавления данных в определённую таблицу БД, ведённых пользователем!!!
+        /// </summary>
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {

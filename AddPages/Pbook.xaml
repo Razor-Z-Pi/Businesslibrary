@@ -9,6 +9,9 @@
       Title="Pbook">
 
     <Grid>
+
+        <!--Сетка страницы-->
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -22,6 +25,8 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+
+        <!--Текст-->
 
         <StackPanel Grid.Column="0" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
@@ -53,9 +58,11 @@
             </StackPanel>
         </StackPanel>
 
+        <!--Поля для ввода-->
+
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox Text="{Binding Name}" TextAlignment="Center" Width="200" x:Name="NameB"></TextBox>
+                <TextBox Text="{Binding Name}" MaxLength="45" TextAlignment="Center" Width="200" x:Name="NameB"></TextBox>
             </StackPanel>
         </StackPanel>
 
@@ -73,15 +80,17 @@
 
         <StackPanel Grid.Column="1" Grid.Row="3">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox Text="{Binding NumberOfLines}" TextAlignment="Center" Width="200" x:Name="numberoflines"></TextBox>
+                <TextBox Text="{Binding NumberOfLines}" MaxLength="4" TextAlignment="Center" Width="200" x:Name="numberoflines"></TextBox>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="4">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox Text="{Binding Amount}" TextAlignment="Center" Width="200" x:Name="amount"></TextBox>
+                <TextBox Text="{Binding Amount}" MaxLength="3" TextAlignment="Center" Width="200" x:Name="amount"></TextBox>
             </StackPanel>
         </StackPanel>
+
+        <!--Кнопка для сохранения-->
 
         <Button Grid.ColumnSpan="2" Grid.Row="5" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click">
             <Button.Resources>

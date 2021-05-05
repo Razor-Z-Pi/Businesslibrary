@@ -23,6 +23,10 @@ namespace CourseLibrary.AddPages
     {
         Accounting __contex = new Accounting();
 
+        /// <summary>
+        ///  Обьявления экземпляра нужной таблицы из БД, для манипуляциями самих данных
+        /// </summary>
+
         public PAccounting(Accounting selectedAccounting)
         {
             InitializeComponent();
@@ -38,6 +42,10 @@ namespace CourseLibrary.AddPages
 
             DataContext = __contex;
         }
+
+        /// <summary>
+        /// Добавления данных в определённую таблицу БД, ведённых пользователем!!!
+        /// </summary>
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {

@@ -20,6 +20,10 @@ namespace CourseLibrary
     /// </summary>
     public partial class Otchot : Window
     {
+        /// <summary>
+        /// Переход по страницам
+        /// </summary>
+
         public Otchot()
         {
             InitializeComponent();
@@ -42,6 +46,10 @@ namespace CourseLibrary
             frmPrinter.Navigate(new PagesOtcoth.accountOtch());
         }
 
+        /// <summary>
+        /// Запуск диологового окна для принтера
+        /// </summary>
+
         private void Printer_Click(object sender, RoutedEventArgs e)
         {
             PrintDialog dialog = new PrintDialog();
@@ -49,6 +57,17 @@ namespace CourseLibrary
             {
                 dialog.PrintVisual(this.Printers, "Отчёт");
             }          
+        }
+
+        /// <summary>
+        ///  Возращение на главное окно
+        /// </summary>
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            WorkGo go = new WorkGo();
+            go.Show();
+            this.Close();
         }
     }
 }

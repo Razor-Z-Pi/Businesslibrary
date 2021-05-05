@@ -9,6 +9,9 @@
       Title="PAvtorization">
 
     <Grid>
+
+        <!--Сетка страницы-->
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -21,6 +24,8 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
+        <!--Текст-->
+        
         <StackPanel Grid.Column="0" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
                 <TextBlock TextAlignment="Center" Text="Логин"></TextBlock>
@@ -38,24 +43,29 @@
                 <TextBlock TextAlignment="Center" Text="Руководитель"></TextBlock>
             </StackPanel>
         </StackPanel>
-        
+
+        <!--Поля для ввода-->
+
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="login"></TextBox>
+                <TextBox Text="{Binding Login}" MaxLength="12" TextAlignment="Center" Width="200" x:Name="login"></TextBox>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="1">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <TextBox TextAlignment="Center" Width="200" x:Name="password"></TextBox>
+                <TextBox Text="{Binding Password}" MaxLength="12" TextAlignment="Center" Width="200" x:Name="password"></TextBox>
             </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Column="1" Grid.Row="2">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
-                <ComboBox Width="200" x:Name="cmb_profer"></ComboBox>
+                <ComboBox SelectedItem="{Binding id_Pofer}" Width="200" DisplayMemberPath="Name" x:Name="cmb_profer"></ComboBox>
             </StackPanel>
         </StackPanel>
+
+        <!--Кнопка для сохранения-->
+
         <Button Grid.ColumnSpan="2" Grid.Row="3" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click">
             <Button.Resources>
                 <Style TargetType="Border">

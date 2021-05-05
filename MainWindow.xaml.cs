@@ -25,12 +25,15 @@ namespace CourseLibrary
     public partial class MainWindow : Window
     {
 
+        string DOC = @"DOC.txt"; // Путь для справки
         string patch = @"Login.txt"; // Путь для файла с записью логина
         string patch1 = @"Password.txt"; // Путь для файла с записью к паролю
         string number = @"num.txt"; // Путь для файла с записью для Активации запоминания данных в полях
+        string admin = @"admin.txt"; //Для админестратора 
 
         int num = 0; // Переменная для счётчика движения, при не правильном входе в приложение
         int on = 0; // Переменная которая в дальнейшем будет влиять на запоминания
+        int swift = 0; // Переменная для доступа прав админестратора
         static StreamWriter sw; // Поток для записи в файл
         static StreamReader sr; // Поток для чтения из файла
 
@@ -104,6 +107,29 @@ namespace CourseLibrary
                         if (userObj.id_Pofer == profer.id_Profer) // Сравниваем в БД Данные Руководителей
                         {
                             user = profer.Name + " " + profer.FName + " " + profer.LName; // Создали ранее переменную в которую сложим ФИО Руково-лей
+                        }
+
+                        if (userObj.id_Pofer == 3)
+                        {
+                            swift = 1;
+                            DirectoryInfo admininfo = new DirectoryInfo(admin);
+                            if (!admininfo.Exists) // Если файл существует
+                            {
+                                sw = new StreamWriter(admin);
+                                sw.Write(swift);
+                                sw.Close();
+                            }
+                        }
+                        else
+                        {
+                            swift = 0;
+                            DirectoryInfo admininfo = new DirectoryInfo(admin);
+                            if (!admininfo.Exists) // Если файл существует
+                            {
+                                sw = new StreamWriter(admin);
+                                sw.Write(swift);
+                                sw.Close();
+                            }
                         }
 
                         MessageBox.Show("Рады вас видить " + $"{user}", // Вобщем это для декора, и какой сотрудник зашёл в приложение
@@ -219,6 +245,7 @@ namespace CourseLibrary
                 Password_1.Password = text2;  
                 Load_date.IsChecked = true; // Включения ChekBox, для запоминания данных
             }
+            System.Diagnostics.Process.Start("notepad.exe", DOC);
         }
 
         private void Window_Activated(object sender, EventArgs e)

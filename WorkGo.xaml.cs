@@ -2,6 +2,7 @@
 using CourseLibrary.Pages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,19 @@ namespace CourseLibrary
     /// </summary>
     public partial class WorkGo : Window
     {
+        string patch = @"README.txt"; // Путь для справки
+        string admin = @"admin.txt"; //Для админестратора 
+        static StreamReader sr; // Поток для чтения из файла
+
         public WorkGo()
         {
             InitializeComponent();
             AddFrame.frame = frm;
         }
+        
+        /// <summary>
+        /// Переходы между страницами при нажатие кнопки
+        /// </summary>
 
         private void Btn_book_Click(object sender, RoutedEventArgs e)
         {
@@ -71,6 +80,10 @@ namespace CourseLibrary
                             MessageBoxImage.Warning);
         }
 
+        /// <summary>
+        /// Переход в браузер на сайт по ссылки
+        /// </summary>
+
         private void next1_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://ru.bookmate.com/");
@@ -91,14 +104,32 @@ namespace CourseLibrary
             System.Diagnostics.Process.Start("https://www.elibrary.ru/defaultx.asp?");
         }
 
+        /// <summary>
+        ///  Открытие формы отчётов
+        /// </summary>
+
         private void PrinterOtchet_Click(object sender, RoutedEventArgs e)
         {
             Otchot otchot = new Otchot();
             otchot.Show();
+            this.Close();
         }
+
+        /// <summary>
+        ///  Нажатие на меню-бургер, активация анимации
+        /// </summary>
 
         private void burger_Click(object sender, RoutedEventArgs e)
         {
+            sr = new StreamReader(admin); // Чтения из файла для активация 
+            string pro = sr.ReadLine(); // Вкладываем данные в переменную
+            sr.Close(); // Закрывания файла
+
+            if (Int32.Parse(pro) == 1) // Для прав админестратора
+            {
+                admins.Visibility = Visibility.Visible;
+            }
+
             if (leftburg.Width == 0)
             {
                 DoubleAnimation doubleAnimation = new DoubleAnimation();
@@ -143,6 +174,20 @@ namespace CourseLibrary
                 }
             }
 
+        }
+
+        /// <summary>
+        ///  Открытие справки
+        /// </summary>
+
+        private void help_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("notepad.exe", patch);
+        }
+
+        private void admin_Click(object sender, RoutedEventArgs e)
+        {
+            AddFrame.frame.Navigate(new Pages.Avtorization());
         }
     }
 }

@@ -9,6 +9,7 @@
       Title="Genre" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
+        <!--Панель с навигацией кнопок-->
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0" Orientation="Horizontal">
             <Button Content="Экспорт в Excel" Margin="0 0 90 0" Width="100" x:Name="btn_excel" Click="btn_excel_Click">
                 <Button.Resources>
@@ -41,7 +42,9 @@
                 </TextBox.Resources>
             </TextBox>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Margin="0 30 0 0">
+
+        <!--Отображение данных-->
+        <StackPanel HorizontalAlignment="Center" Margin="0,30,0,149">
             <DataGrid AutoGenerateColumns="False" x:Name="datagrid" ColumnWidth="*" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Название" Binding="{Binding Name}"></DataGridTextColumn>
@@ -55,5 +58,6 @@
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
+        <Image Source="../icon/Genre.png" Margin="0,301,0,0"></Image>
     </Grid>
 </Page>

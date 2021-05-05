@@ -9,6 +9,7 @@
       Title="bookOtch">
 
     <Grid>
+        <!--Отображение информации-->
         <Border x:Name="Printer">
             <DataGrid VerticalGridLinesBrush="Transparent" HorizontalGridLinesBrush="Transparent" AutoGenerateColumns="False" x:Name="datagrid" BorderThickness="0" ColumnWidth="*" IsReadOnly="True">
                 <DataGrid.Columns>

@@ -28,6 +28,10 @@ namespace CourseLibrary.Pages
             datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Avtor.ToList();
         }
 
+        /// <summary>
+        ///  Поиск(фильтрация) данных по Имени поля
+        /// </summary>
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string serch = Txtext.Text;
@@ -36,20 +40,28 @@ namespace CourseLibrary.Pages
             datagrid.ItemsSource = avtors.ToList();
         }
 
+        /// <summary>
+        ///  Переход на страницу добавления записи
+        /// </summary>
+
         private void Btn_add_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.PAvtor(null));
         }
 
+        /// <summary>
+        ///  Удаление записи
+        /// </summary>
+
         private void Btn_delete_Click(object sender, RoutedEventArgs e)
         {
-            var genreForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Avtor>().ToList(); //Выделение полей для удаления 
+            var ForRemoving = datagrid.SelectedItems.Cast<CourseLibrary.Avtor>().ToList(); //Выделение полей для удаления 
 
-            if (MessageBox.Show($"Вы точно хотите удалить следущие {genreForRemoving.Count()} Элементов???", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            if (MessageBox.Show($"Вы точно хотите удалить следущие {ForRemoving.Count()} Элементов???", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    BusinessLibraryEntities.GetContex().Avtor.RemoveRange(genreForRemoving);
+                    BusinessLibraryEntities.GetContex().Avtor.RemoveRange(ForRemoving);
                     BusinessLibraryEntities.GetContex().SaveChanges();
                     MessageBox.Show("Данные удалены!!!");
 
@@ -62,6 +74,10 @@ namespace CourseLibrary.Pages
             }
         }
 
+        /// <summary>
+        ///  Обновление данных на странице при добавление, удаление, редактирование!!!
+        /// </summary>
+
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
@@ -71,10 +87,18 @@ namespace CourseLibrary.Pages
             }
         }
 
+        /// <summary>
+        ///  Редактирование записи
+        /// </summary>
+
         private void Btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.PAvtor((sender as Button).DataContext as CourseLibrary.Avtor));
         }
+
+        /// <summary>
+        /// Экспорт в отчёт Excel
+        /// </summary>
 
         private void btn_excel_Click(object sender, RoutedEventArgs e)
         {

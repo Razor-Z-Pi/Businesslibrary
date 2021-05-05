@@ -24,6 +24,10 @@ namespace CourseLibrary.AddPages
 
         private Profer _contex = new Profer();
 
+        /// <summary>
+        ///  Обьявления экземпляра нужной таблицы из БД, для манипуляциями самих данных
+        /// </summary>
+
         public PProfer(Profer selectedProfer)
         {
             InitializeComponent();
@@ -35,6 +39,10 @@ namespace CourseLibrary.AddPages
 
             DataContext = _contex;
         }
+
+        /// <summary>
+        /// Добавления данных в определённую таблицу БД, ведённых пользователем!!!
+        /// </summary>
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {

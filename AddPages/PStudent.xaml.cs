@@ -23,6 +23,10 @@ namespace CourseLibrary.AddPages
     {
         private Student _contex = new Student();
 
+        /// <summary>
+        ///  Обьявления экземпляра нужной таблицы из БД, для манипуляциями самих данных
+        /// </summary>
+
         public PStudent(Student selectStud)
         {
             InitializeComponent();
@@ -36,6 +40,10 @@ namespace CourseLibrary.AddPages
             CMDaddress.ItemsSource = BusinessLibraryEntities.GetContex().Address.ToList();
             CMDbook.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
         }
+
+        /// <summary>
+        /// Добавления данных в определённую таблицу БД, ведённых пользователем!!!
+        /// </summary>
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {

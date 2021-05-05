@@ -72,7 +72,6 @@
     <Compile Include="Accounting.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="AddPages\id_Address.cs" />
     <Compile Include="AddPages\PAccounting.xaml.cs">
       <DependentUpon>PAccounting.xaml</DependentUpon>
     </Compile>
@@ -148,6 +147,9 @@
     </Compile>
     <Compile Include="Pages\Avtor.xaml.cs">
       <DependentUpon>Avtor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Avtorization.xaml.cs">
+      <DependentUpon>Avtorization.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Books1.xaml.cs">
       <DependentUpon>Books1.xaml</DependentUpon>
@@ -245,6 +247,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Avtorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Books1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -312,8 +318,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\loop.png" />
-    <Resource Include="icon\menu_circular_button_burger_icon_124214.png" />
     <Resource Include="icon\delete.png" />
+    <Resource Include="icon\1486505254-display-menu-mobile-mobile-menu-phone-menu_81429.png" />
+    <Resource Include="icon\Avtor.png" />
+    <Resource Include="icon\Profer.png" />
+    <Resource Include="icon\Student.png" />
+    <Resource Include="icon\account.png" />
+    <Resource Include="icon\Address.png" />
+    <Resource Include="icon\Back.png" />
+    <Resource Include="icon\Genre.png" />
+    <Resource Include="icon\admin.png" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

@@ -121,3 +121,5 @@ J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.g.cs
 J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\accountOtch.baml
 J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\bookOtch.baml
 J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtorization.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtorization.baml

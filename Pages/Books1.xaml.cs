@@ -29,6 +29,10 @@ namespace CourseLibrary.Pages
             datagrid.ItemsSource = BusinessLibraryEntities.GetContex().Books.ToList();
         }
 
+        /// <summary>
+        ///  Поиск(фильтрация) данных по Имени поля
+        /// </summary>
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string serch = Txtext.Text;
@@ -37,10 +41,18 @@ namespace CourseLibrary.Pages
             datagrid.ItemsSource = books.ToList();
         }
 
+        /// <summary>
+        ///  Переход на страницу добавления записи
+        /// </summary>
+
         private void Btn_add_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.Pbook(null));
         }
+
+        /// <summary>
+        ///  Удаление записи
+        /// </summary>
 
         private void Btn_delete_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +75,10 @@ namespace CourseLibrary.Pages
             }
         }
 
+        /// <summary>
+        ///  Обновление данных на странице при добавление, удаление, редактирование!!!
+        /// </summary>
+
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)
@@ -72,6 +88,10 @@ namespace CourseLibrary.Pages
             }
         }
 
+        /// <summary>
+        ///  Редактирование записи
+        /// </summary>
+
         private void btn_bild_Click(object sender, RoutedEventArgs e)
         {
             AddFrame.frame.Navigate(new AddPages.Pbook((sender as Button).DataContext as CourseLibrary.Book));
@@ -79,6 +99,10 @@ namespace CourseLibrary.Pages
             BusinessLibraryEntities.GetContex().Books.RemoveRange(ForRemoving);
             BusinessLibraryEntities.GetContex().SaveChanges();
         }
+
+        /// <summary>
+        /// Экспорт в отчёт Excel
+        /// </summary>
 
         private void btn_excel_Click(object sender, RoutedEventArgs e)
         {

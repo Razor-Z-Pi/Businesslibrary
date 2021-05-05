@@ -9,6 +9,7 @@
       Title="accountOtch">
 
     <Grid>
+        <!--Отображение информации-->
         <Border x:Name="Printer">
             <DataGrid VerticalGridLinesBrush="Transparent" HorizontalGridLinesBrush="Transparent" AutoGenerateColumns="False" x:Name="datagrid" ColumnWidth="*" BorderThickness="0" IsReadOnly="True">
                 <DataGrid.Columns>

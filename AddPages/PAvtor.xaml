@@ -9,6 +9,9 @@
       Title="PAvtor">
 
     <Grid>
+
+        <!--Сетка страницы-->
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -19,17 +22,23 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
+        <!--Текст-->
+
         <StackPanel Grid.Column="0" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
                 <TextBlock TextAlignment="Center" Text="Автор"></TextBlock>
             </StackPanel>
         </StackPanel>
 
+        <!--Поля для ввода-->
+
         <StackPanel Grid.Column="1" Grid.Row="0">
             <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
                 <TextBox Text="{Binding Name}" TextAlignment="Center" Width="200" x:Name="avtor" MaxLength="60"></TextBox>
             </StackPanel>
         </StackPanel>
+
+        <!--Кнопка для сохранения-->
 
         <Button Grid.ColumnSpan="2" Grid.Row="3" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click">
             <Button.Resources>
@@ -38,6 +47,5 @@
                 </Style>
             </Button.Resources>
         </Button>
-
     </Grid>
 </Page>

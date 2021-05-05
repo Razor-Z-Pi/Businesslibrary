@@ -24,6 +24,10 @@ namespace CourseLibrary.AddPages
 
         Book __contex = new Book();
 
+        /// <summary>
+        ///  Обьявления экземпляра нужной таблицы из БД, для манипуляциями самих данных
+        /// </summary>
+
         public Pbook(Book selectedBook)
         {
             InitializeComponent();
@@ -40,6 +44,10 @@ namespace CourseLibrary.AddPages
 
             DataContext = __contex;
         }
+
+        /// <summary>
+        /// Добавления данных в определённую таблицу БД, ведённых пользователем!!!
+        /// </summary>
 
         private void Btn_save_Click(object sender, RoutedEventArgs e)
         {

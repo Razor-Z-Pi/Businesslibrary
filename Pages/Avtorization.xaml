@@ -6,9 +6,60 @@
       xmlns:local="clr-namespace:CourseLibrary.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Avtorization">
+      Title="Avtorization" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
-        
+        <!--Панель с навигацией кнопок-->
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0" Orientation="Horizontal">
+            <Button Content="Экспорт в Excel" Margin="0 0 50 0" Width="100" x:Name="btn_excel" Click="btn_excel_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Добавить" Width="100" Margin="10 0" x:Name="btn_add" Click="btn_add_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Content="Удалить" Margin="10 0"  Width="100" x:Name="btn_delete" Click="btn_delete_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Label Content="Поиск по логину" Foreground="Black" Margin="10 0"></Label>
+            <Image Margin="10 0" Source="../images/loop.png" Height="30" Width="39"></Image>
+            <TextBox Width="200" Height="30" TextAlignment="Center" MaxLength="30" TextChanged="Txtext_TextChanged" x:Name="Txtext">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </StackPanel>
+
+        <!--Отображение данных-->
+        <StackPanel HorizontalAlignment="Center" Margin="0,30,0,149">
+            <DataGrid AutoGenerateColumns="False" x:Name="datagrid" ColumnWidth="*" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Логин" Binding="{Binding Login}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Руководитель" Binding="{Binding Profer.Name}"></DataGridTextColumn>
+                    <DataGridTemplateColumn Width="auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Редактировать" x:Name="btn_bild" Click="btn_bild_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <Image Source="../icon/admin.png" Margin="0,301,0,0"></Image>
     </Grid>
 </Page>
