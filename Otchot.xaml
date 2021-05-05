@@ -24,19 +24,44 @@
                        FontFamily="Oswald sans-serif"></TextBlock>
         </StackPanel>
 
-        <Border x:Name="Printers" Grid.Row="1">
+        <Border x:Name="Printers" Grid.Row="1" Background="Green">
             <Frame NavigationUIVisibility="Hidden" x:Name="frmPrinter"></Frame>
         </Border>
-
-        <Border CornerRadius="50" Grid.Row="2"  Background="{StaticResource font}">
-            <Border CornerRadius="50" Width="400" Background="{StaticResource header-left}" >
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400" Height="80">
-                    <Button x:Name="student" Content="Студенты" Height="30" Width="80" Margin="10 0" Click="student_Click"></Button>
-                    <Button x:Name="books" Content="Книги" Height="30" Width="80" Margin="10 0" Click="books_Click"></Button>
-                    <Button x:Name="accounting" Content="Учёт" Height="30" Width="80" Margin="10 0" Click="accounting_Click"></Button>
-                    <Button x:Name="Printer" Content="Печать" Height="30" Width="80" Margin="10 0" Click="Printer_Click"></Button>
-                </StackPanel>
+        <StackPanel Grid.Row="2" Background="Green">
+            <Border CornerRadius="50" Background="{StaticResource font}">
+                <Border CornerRadius="50" Width="400" Background="{StaticResource header-left}" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400" Height="80">
+                        <Button x:Name="student" Content="Студенты" Height="30" Width="80" Margin="10 0" Click="student_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="books" Content="Книги" Height="30" Width="80" Margin="10 0" Click="books_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="accounting" Content="Учёт" Height="30" Width="80" Margin="10 0" Click="accounting_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="Printer" Content="Печать" Height="30" Width="80" Margin="10 0" Click="Printer_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                </Border>
             </Border>
-        </Border>
+        </StackPanel>
     </Grid>
 </Window>

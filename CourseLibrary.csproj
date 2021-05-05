@@ -312,6 +312,8 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\loop.png" />
+    <Resource Include="icon\menu_circular_button_burger_icon_124214.png" />
+    <Resource Include="icon\delete.png" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

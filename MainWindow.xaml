@@ -48,7 +48,7 @@
                     <TextBox x:Name="Login" Text="" MaxLength="10"></TextBox>
                     <TextBlock TextAlignment="Center" Text="Пароль"></TextBlock>
                     <TextBox x:Name="Password" Text="" MaxLength="12" Visibility="Hidden"></TextBox>
-                    <PasswordBox x:Name="Password_1"  MaxLength="12" RenderTransformOrigin="0.53,-0.167" Height="20">
+                    <PasswordBox x:Name="Password_1"  MaxLength="12" RenderTransformOrigin="0.53,-0.167" Height="20" Margin="0,0,2,0">
                         <PasswordBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -59,7 +59,13 @@
                         </PasswordBox.RenderTransform>
                     </PasswordBox>
                     <Separator Height="20"/>
-                    <Button Width="60" Height="30" Content="Войти" x:Name="btnOpen" Click="Button_Click"></Button>
+                    <Button Width="60" Height="30" Content="Войти" x:Name="btnOpen" Click="Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="11"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </StackPanel>
 
                 <!--Доп сетка для флажков-->
@@ -69,9 +75,44 @@
                         <ColumnDefinition Width="3*"/>
                         <ColumnDefinition Width="125"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <CheckBox Grid.Column="0" Content="Запомнить данные" Grid.ColumnSpan="2" x:Name="Load_date"></CheckBox>
-                    <CheckBox Grid.Column="2" Content="Показать пароль" x:Name="Password_ninjza" Click="Password_ninjza_Click"></CheckBox>
+                    <CheckBox Grid.Column="0" Content="Запомнить данные" Grid.ColumnSpan="2" x:Name="Load_date">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                    <CheckBox Grid.Column="2" Content="Показать пароль" x:Name="Password_ninjza" Click="Password_ninjza_Click">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
                 </Grid>
+
+                <Canvas x:Name="Canvas" Background="Transparent" Height="25"
+                VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1">
+                    <TextBlock Margin="0,-7,0,0" VerticalAlignment="Bottom" FontSize="15"  FontWeight="Bold" Foreground="#555"
+                       Text="Покупка книг была бы хорошей идеей, если бы можно было также купить и время для их чтения. 
+                             Любить чтение — это обменивать часы скуки, неизбежные в жизни, на часы большого наслаждения.
+                             Книги — хороший способ поговорить с тем, с кем разговор невозможен. Кто много читает и много ходит, тот много видит и много знает." 
+                           Canvas.Right="0">
+                        <TextBlock.Triggers>
+                            <EventTrigger RoutedEvent="TextBlock.Loaded">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" From="1300" To="-3500" 
+                                                     Duration="0:0:20" RepeatBehavior="Forever"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                        </TextBlock.Triggers>
+                    </TextBlock>
+                </Canvas>
+
             </Grid>
         </StackPanel>
 

@@ -39,6 +39,28 @@
                     </Image.RenderTransform>
                 </Image>
             </StackPanel>
+            <Canvas x:Name="Canvas" Background="Transparent" Height="21"
+                VerticalAlignment="Bottom" Margin="0,0,0,0">
+                <TextBlock VerticalAlignment="Bottom" FontSize="15"  FontWeight="Bold" Foreground="WhiteSmoke"
+                       Text="Чтение чрезвычайно помогает, а книги — хорошая компания, если взять самые подходящие.
+                             Тому, кто читает книги, никогда не скучно.
+                             Чтение книг — не способ бегства от жизни, книги дают ключ к ее пониманию. Ключ к реальности.
+                             Покой, камин, книги, тишина… Прежде в этом видели одно мещанство. Теперь это мечты о потерянном рае." 
+                           Canvas.Right="0" Height="24" Canvas.Left="-2655" Canvas.Top="-3" Width="2929">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="TextBlock.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" From="1300" To="-4000" 
+                                                     Duration="0:0:20" RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                </TextBlock>
+            </Canvas>
         </StackPanel>
 
 
@@ -50,16 +72,54 @@
                 <MenuItem x:Name="PrinterOtchet" Click="PrinterOtchet_Click" Foreground="WhiteSmoke" Header="Отчёт" Width="45"></MenuItem>
                 <MenuItem Header="Developer" x:Name="Developer" Click="Developer_Click" Width="69" Height="17"></MenuItem>
             </Menu>
+            <Button x:Name="burger" Click="burger_Click" Background="Transparent" Width="50" RenderTransformOrigin="0.5,0.5" Margin="0,48,0,0" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.625"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-83.814"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel>
+                    <Image x:Name="menuImg" Source="./icon/menu_circular_button_burger_icon_124214.png" Height="48" Width="109"></Image>
+                </StackPanel>
+            </Button>
+            <Button x:Name="burgerexit" Click="burgerexit_Click" Background="Transparent" Width="0" RenderTransformOrigin="0.5,0.5" Margin="0,48,0,0" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.625"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-83.814"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel>
+                    <Image x:Name="menuImg1" Source="./icon/delete.png" Height="48" Width="109"></Image>
+                </StackPanel>
+            </Button>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="{StaticResource header-left}">
-            <Button Height="50" Content="Книга" Background="Transparent" BorderThickness="0" x:Name="btn_book" Click="Btn_book_Click" ></Button>
-            <Button Height="50" Content="Автор"  Background="Transparent"  BorderThickness="0" x:Name="btn_avtor" Click="Btn_avtor_Click"></Button>
-            <Button Height="50" Content="Жанр"  Background="Transparent"  BorderThickness="0" x:Name="btn_genre" Click="Btn_genre_Click" ></Button>
-            <Button Height="50" Content="Студенты"  Background="Transparent"  BorderThickness="0" x:Name="btn_student" Click="Btn_student_Click"></Button>
-            <Button Height="50" Content="Адрес"  Background="Transparent"  BorderThickness="0" x:Name="btn_address" Click="Btn_address_Click"></Button>
-            <Button Height="50" Content="Учёт"  Background="Transparent"  BorderThickness="0" x:Name="btn_acountin" Click="Btn_acountin_Click"></Button>
-            <Button Height="50" Content="Руководители"  Background="Transparent"  BorderThickness="0" x:Name="btn_profer" Click="Btn_profer_Click"></Button>
-            <Button Height="70" Content="Авторизация"  Background="Transparent"  BorderThickness="0" Visibility="Hidden"></Button>
+        <StackPanel  Background="{StaticResource font}"  Grid.Row="1" Grid.Column="0">
+            <StackPanel x:Name="leftburg" Grid.Row="1" Width="0" Grid.Column="0" Background="{StaticResource header-left}">
+                <Button Height="50" Content="Книга" Background="Transparent" BorderThickness="0" x:Name="btn_book" Click="Btn_book_Click" ></Button>
+                <Button Height="50" Content="Автор"  Background="Transparent"  BorderThickness="0" x:Name="btn_avtor" Click="Btn_avtor_Click"></Button>
+                <Button Height="50" Content="Жанр"  Background="Transparent"  BorderThickness="0" x:Name="btn_genre" Click="Btn_genre_Click" ></Button>
+                <Button Height="50" Content="Студенты"  Background="Transparent"  BorderThickness="0" x:Name="btn_student" Click="Btn_student_Click"></Button>
+                <Button Height="50" Content="Адрес"  Background="Transparent"  BorderThickness="0" x:Name="btn_address" Click="Btn_address_Click"></Button>
+                <Button Height="50" Content="Учёт"  Background="Transparent"  BorderThickness="0" x:Name="btn_acountin" Click="Btn_acountin_Click"></Button>
+                <Button Height="50" Content="Руководители"  Background="Transparent"  BorderThickness="0" x:Name="btn_profer" Click="Btn_profer_Click"></Button>
+                <Button Height="70" Content="Авторизация"  Background="Transparent"  BorderThickness="0" Visibility="Hidden"></Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

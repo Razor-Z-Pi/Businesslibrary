@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -94,6 +95,54 @@ namespace CourseLibrary
         {
             Otchot otchot = new Otchot();
             otchot.Show();
+        }
+
+        private void burger_Click(object sender, RoutedEventArgs e)
+        {
+            if (leftburg.Width == 0)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.From = 0;
+                doubleAnimation.To = leftburg.Width + 100;
+                doubleAnimation.Duration = TimeSpan.FromSeconds(1);
+                leftburg.BeginAnimation(StackPanel.WidthProperty, doubleAnimation);
+                if (burger.Width == 50)
+                { 
+                    doubleAnimation.From = 50;
+                    doubleAnimation.To = burger.Width - 50;
+                    doubleAnimation.Duration = TimeSpan.FromSeconds(0.1);
+                    burger.BeginAnimation(Button.WidthProperty, doubleAnimation);
+                    doubleAnimation.From = 0;
+                    doubleAnimation.To = burgerexit.Width + 50;
+                    doubleAnimation.Duration = TimeSpan.FromSeconds(0.1);
+                    burgerexit.BeginAnimation(Button.WidthProperty, doubleAnimation);
+                }
+            }
+
+        }
+
+        private void burgerexit_Click(object sender, RoutedEventArgs e)
+        {
+            if (leftburg.Width == 100)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.From = 100;
+                doubleAnimation.To = leftburg.Width - 100;
+                doubleAnimation.Duration = TimeSpan.FromSeconds(1);
+                leftburg.BeginAnimation(StackPanel.WidthProperty, doubleAnimation);
+                if (burgerexit.Width == 50)
+                {
+                    doubleAnimation.From = 50;
+                    doubleAnimation.To = burgerexit.Width - 50;
+                    doubleAnimation.Duration = TimeSpan.FromSeconds(0.1);
+                    burgerexit.BeginAnimation(Button.WidthProperty, doubleAnimation);
+                    doubleAnimation.From = 0;
+                    doubleAnimation.To = burger.Width + 50;
+                    doubleAnimation.Duration = TimeSpan.FromSeconds(0.1);
+                    burger.BeginAnimation(Button.WidthProperty, doubleAnimation);
+                }
+            }
+
         }
     }
 }
