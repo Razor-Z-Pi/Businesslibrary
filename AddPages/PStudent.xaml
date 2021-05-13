@@ -1,0 +1,129 @@
+﻿<Page x:Class="CourseLibrary.AddPages.PStudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseLibrary.AddPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PStudent">
+
+    <Grid>
+        
+            <!--Сетка страницы-->
+        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Текст-->
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Имя"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Фамилия"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Отчество"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="3">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Паспорт-серия"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="4">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Телефон"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="5">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Адрес"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="6">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Книга"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Поля для ввода-->
+        
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding Name}" MaxLength="35" TextAlignment="Center" Width="200" x:Name="Name"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding FName}" MaxLength="35" TextAlignment="Center" Width="200" x:Name="FName"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding LName}" MaxLength="35" TextAlignment="Center" Width="200" x:Name="LName"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="3">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding Pasport_seria}" TextAlignment="Center" MaxLength="10" Width="200" x:Name="PsP"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="4">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding Telephone}" TextAlignment="Center" MaxLength="11" Width="200" x:Name="Tel"></TextBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="5">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <ComboBox x:Name="CMDaddress" SelectedItem="{Binding id_Address}" DisplayMemberPath="Strets" Width="200"></ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="6">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <ComboBox x:Name="CMDbook" SelectedItem="{Binding id_Book}" DisplayMemberPath="Name" Width="200"></ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Кнопка для сохранения-->
+
+        <Button Grid.ColumnSpan="2" Grid.Row="7" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>

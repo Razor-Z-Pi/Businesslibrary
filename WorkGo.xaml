@@ -1,0 +1,167 @@
+﻿<Window x:Class="CourseLibrary.WorkGo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseLibrary"
+        mc:Ignorable="d"
+         Title="Менеджер-Библиотека" Height="550" Width="900" ResizeMode="CanMinimize" Icon="icon/free-icon-library-1818714.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="186*"></RowDefinition>
+            <RowDefinition Height="235*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Firebrick" Orientation="Horizontal">
+            <StackPanel Margin="14 0" Width="100" HorizontalAlignment="Left">
+                <Image Source="./icon/free-icon-library-1818714.png"></Image>
+            </StackPanel>
+            <TreeViewItem Margin="0 0 360 0" Foreground="WhiteSmoke" Header="Популярные сайты по книгам" Background="Transparent" BorderThickness="0" BorderBrush="Transparent">
+                <Hyperlink x:Name="next1" Click="next1_Click" Foreground="WhiteSmoke" TextDecorations="None">Bookmate</Hyperlink>
+                <Hyperlink x:Name="next2" Click="next2_Click" Foreground="WhiteSmoke" TextDecorations="None">проекта «Гутенберг»</Hyperlink>
+                <Hyperlink x:Name="next3" Click="next3_Click" Foreground="WhiteSmoke" TextDecorations="None">ImWerden</Hyperlink>
+                <Hyperlink x:Name="next4" Click="next4_Click" Foreground="WhiteSmoke" TextDecorations="None">eLIBRARY.ru</Hyperlink>
+            </TreeViewItem>
+            <StackPanel Width="100" Margin="10 0 0 0" HorizontalAlignment="Right">
+                <Image Source="./Images/pngwing.com.png" Height="109" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="-0.001"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="0.542"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </StackPanel>
+            <Canvas x:Name="Canvas" Background="Transparent" Height="21"
+                VerticalAlignment="Bottom" Margin="0,0,0,0">
+                <TextBlock VerticalAlignment="Bottom" FontSize="15"  FontWeight="Bold" Foreground="WhiteSmoke"
+                       Text="Чтение чрезвычайно помогает, а книги — хорошая компания, если взять самые подходящие.
+                             Тому, кто читает книги, никогда не скучно.
+                             Чтение книг — не способ бегства от жизни, книги дают ключ к ее пониманию. Ключ к реальности.
+                             Покой, камин, книги, тишина… Прежде в этом видели одно мещанство. Теперь это мечты о потерянном рае." 
+                           Canvas.Right="0" Height="24" Canvas.Left="-2655" Canvas.Top="-3" Width="2929">
+                    <TextBlock.Triggers>
+                        <EventTrigger RoutedEvent="TextBlock.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="(Canvas.Left)" From="1300" To="-4000" 
+                                                     Duration="0:0:20" RepeatBehavior="Forever"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </TextBlock.Triggers>
+                </TextBlock>
+            </Canvas>
+        </StackPanel>
+
+
+        <Frame Grid.Row="1"  Background="{StaticResource font}" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden" Height="420" Margin="0,0,0,1" Grid.RowSpan="2"></Frame>
+
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="Firebrick" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,779,0">
+            <Menu Background="Transparent" Foreground="WhiteSmoke" Width="111">
+                <MenuItem x:Name="PrinterOtchet" Click="PrinterOtchet_Click" Foreground="WhiteSmoke" Header="Отчёт" Width="45"></MenuItem>
+                <MenuItem Header="Справка" x:Name="help" Click="help_Click" Width="62" Height="17"></MenuItem>
+                <MenuItem Header="Developer" x:Name="Developer" Click="Developer_Click" Width="69" Height="17"></MenuItem>
+            </Menu>
+            <Button x:Name="burger" Click="burger_Click" Background="Transparent" Width="50" RenderTransformOrigin="0.5,0.5" Margin="0,48,0,0" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.625"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-83.814"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel>
+                    <Image x:Name="menuImg" Source="./icon/1486505254-display-menu-mobile-mobile-menu-phone-menu_81429.png" Height="48" Width="109"></Image>
+                </StackPanel>
+            </Button>
+            <Button x:Name="burgerexit" Click="burgerexit_Click" Background="Transparent" Width="0" RenderTransformOrigin="0.5,0.5" Margin="0,48,0,0" BorderThickness="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="50"/>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.625"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-83.814"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel>
+                    <Image x:Name="menuImg1" Source="./icon/delete.png" Height="48" Width="109"></Image>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel  Background="{StaticResource font}"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel x:Name="leftburg" Grid.Row="1" Width="0" Grid.Column="0" Background="{StaticResource header-left}">
+                <Button Height="50" Background="Transparent" BorderThickness="0" x:Name="btn_book" Click="Btn_book_Click" >
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./images/pngwing.com.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Книга" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50"  Background="Transparent"  BorderThickness="0" x:Name="btn_avtor" Click="Btn_avtor_Click">
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/Avtor.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Автор" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50" Background="Transparent"  BorderThickness="0" x:Name="btn_genre" Click="Btn_genre_Click" >
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/Genre.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Жанр" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50" Background="Transparent"  BorderThickness="0" x:Name="btn_student" Click="Btn_student_Click">
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/Student.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Студенты" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50" Background="Transparent"  BorderThickness="0" x:Name="btn_address" Click="Btn_address_Click">
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/Address.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Адрес" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50" Background="Transparent"  BorderThickness="0" x:Name="btn_acountin" Click="Btn_acountin_Click">
+                    <StackPanel  Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/account.png" Height="36" Width="40"></Image>
+                        <TextBlock Text="Учёт" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Height="50" Background="Transparent"  BorderThickness="0" x:Name="btn_profer" Click="Btn_profer_Click">
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/Profer.png" Width="20" Margin="0,2,0,0"/>
+                        <TextBlock Text="Руководители" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="admins" Click="admin_Click" Height="70" Background="Transparent"  BorderThickness="0" Visibility="Hidden">
+                    <StackPanel Orientation="Horizontal" Height="40" Width="98">
+                        <Image Source="./icon/admin.png" Width="20" Margin="0,2,0,0"/>
+                        <TextBlock Text="Авторизация" VerticalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

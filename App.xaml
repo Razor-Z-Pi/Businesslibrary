@@ -1,0 +1,22 @@
+﻿<Application x:Class="CourseLibrary.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CourseLibrary"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="font">
+            <GradientStop Offset="0.5" Color="#fad852"></GradientStop>
+            <GradientStop Offset="0.6" Color="#d7e087"></GradientStop>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="header-left">
+            <GradientStop Offset="0.5" Color="#1077de"></GradientStop>
+            <GradientStop Offset="0.6" Color="#003b75"></GradientStop>
+        </LinearGradientBrush>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="SeaGreen"></Setter>
+            <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

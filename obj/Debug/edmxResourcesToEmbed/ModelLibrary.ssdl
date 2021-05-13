@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BusinessLibraryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounting">
+    <Key>
+      <PropertyRef Name="id_Accounting" />
+    </Key>
+    <Property Name="id_Accounting" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Profer" Type="int" Nullable="false" />
+    <Property Name="id_Student" Type="int" Nullable="false" />
+    <Property Name="id_Book" Type="int" Nullable="false" />
+    <Property Name="DateOfIssue" Type="date" Nullable="false" />
+    <Property Name="DateOfAdoption" Type="date" />
+    <Property Name="NumberOfBooks" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id_Address" />
+    </Key>
+    <Property Name="id_Address" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Strets" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="Home" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Avtor">
+    <Key>
+      <PropertyRef Name="id_Avtor" />
+    </Key>
+    <Property Name="id_Avtor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Avtorization">
+    <Key>
+      <PropertyRef Name="id_Avtorization" />
+    </Key>
+    <Property Name="id_Avtorization" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="id_Profer" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="id_Book" />
+    </Key>
+    <Property Name="id_Book" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_Genre" Type="int" Nullable="false" />
+    <Property Name="id_Avtor" Type="int" Nullable="false" />
+    <Property Name="NumberOfLines" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="id_Genre" />
+    </Key>
+    <Property Name="id_Genre" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profer">
+    <Key>
+      <PropertyRef Name="id_Profer" />
+    </Key>
+    <Property Name="id_Profer" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="FName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_Avtorization" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="id_Student" />
+    </Key>
+    <Property Name="id_Student" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="FName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="LName" Type="nvarchar" MaxLength="35" Nullable="false" />
+    <Property Name="Pasport_seria" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Telephone" Type="nchar" MaxLength="11" Nullable="false" />
+    <Property Name="id_Address" Type="int" Nullable="false" />
+    <Property Name="id_Book" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Accounting_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="Accounting" Type="Self.Accounting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="id_Book" />
+      </Principal>
+      <Dependent Role="Accounting">
+        <PropertyRef Name="id_Book" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounting_Profer">
+    <End Role="Profer" Type="Self.Profer" Multiplicity="1" />
+    <End Role="Accounting" Type="Self.Accounting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profer">
+        <PropertyRef Name="id_Profer" />
+      </Principal>
+      <Dependent Role="Accounting">
+        <PropertyRef Name="id_Profer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounting_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Accounting" Type="Self.Accounting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="id_Student" />
+      </Principal>
+      <Dependent Role="Accounting">
+        <PropertyRef Name="id_Student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Avtorization_Profer">
+    <End Role="Profer" Type="Self.Profer" Multiplicity="1" />
+    <End Role="Avtorization" Type="Self.Avtorization" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profer">
+        <PropertyRef Name="id_Profer" />
+      </Principal>
+      <Dependent Role="Avtorization">
+        <PropertyRef Name="id_Profer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Avtor">
+    <End Role="Avtor" Type="Self.Avtor" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avtor">
+        <PropertyRef Name="id_Avtor" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="id_Avtor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Genre">
+    <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genre">
+        <PropertyRef Name="id_Genre" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="id_Genre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Profer_Avtorization">
+    <End Role="Avtorization" Type="Self.Avtorization" Multiplicity="1" />
+    <End Role="Profer" Type="Self.Profer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avtorization">
+        <PropertyRef Name="id_Avtorization" />
+      </Principal>
+      <Dependent Role="Profer">
+        <PropertyRef Name="id_Avtorization" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Address1">
+    <End Role="Address" Type="Self.Address" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="id_Address" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="id_Address" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="id_Book" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="id_Book" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BusinessLibraryModelContainer">
+    <EntitySet Name="Accounting" EntityType="Self.Accounting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Avtor" EntityType="Self.Avtor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Avtorization" EntityType="Self.Avtorization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Profer" EntityType="Self.Profer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Accounting_Book" Association="Self.FK_Accounting_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="Accounting" EntitySet="Accounting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounting_Profer" Association="Self.FK_Accounting_Profer">
+      <End Role="Profer" EntitySet="Profer" />
+      <End Role="Accounting" EntitySet="Accounting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounting_Student" Association="Self.FK_Accounting_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Accounting" EntitySet="Accounting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Avtorization_Profer" Association="Self.FK_Avtorization_Profer">
+      <End Role="Profer" EntitySet="Profer" />
+      <End Role="Avtorization" EntitySet="Avtorization" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Avtor" Association="Self.FK_Book_Avtor">
+      <End Role="Avtor" EntitySet="Avtor" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Genre" Association="Self.FK_Book_Genre">
+      <End Role="Genre" EntitySet="Genre" />
+      <End Role="Book" EntitySet="Book" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Profer_Avtorization" Association="Self.FK_Profer_Avtorization">
+      <End Role="Avtorization" EntitySet="Avtorization" />
+      <End Role="Profer" EntitySet="Profer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Address1" Association="Self.FK_Student_Address1">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Book" Association="Self.FK_Student_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

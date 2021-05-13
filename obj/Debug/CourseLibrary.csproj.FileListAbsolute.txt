@@ -1,0 +1,125 @@
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.exe.config
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.exe
+J:\CourseLibrary\Git\bin\Debug\CourseLibrary.pdb
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csprojAssemblyReference.cache
+J:\CourseLibrary\Git\obj\Debug\MainWindow.g.cs
+J:\CourseLibrary\Git\obj\Debug\App.g.cs
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.lref
+J:\CourseLibrary\Git\obj\Debug\App.baml
+J:\CourseLibrary\Git\obj\Debug\MainWindow.baml
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.g.resources
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.Properties.Resources.resources
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.exe
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csprojAssemblyReference.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\MainWindow.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\App.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_Content.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary_MarkupCompile.lref
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.exe
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\WorkGo.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.exe.config
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.exe
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\CourseLibrary.pdb
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.xml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\App.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\MainWindow.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\WorkGo.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.g.resources
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.Properties.Resources.resources
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.GenerateResource.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Books1.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Books1.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Acounting.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Address.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Avtor.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Genre.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Profer.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Students.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Acounting.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Address.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Avtor.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Genre.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Profer.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\Pages\Students.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PStudent.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PStudent.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAddress.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\Pbook.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PGenre.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PProfer.g.cs
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAddress.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\Pbook.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PGenre.baml
+C:\Users\popov\OneDrive\Рабочий стол\CourseLibrary\Git\obj\Debug\AddPages\PProfer.baml
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.dll
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.dll
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.xml
+J:\CourseLibrary\Git\bin\Debug\EntityFramework.SqlServer.xml
+J:\CourseLibrary\Git\bin\Debug\ru\EntityFramework.resources.dll
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAddress.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\Pbook.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PGenre.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PProfer.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PStudent.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Acounting.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Address.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtor.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Books1.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Genre.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Profer.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Students.g.cs
+J:\CourseLibrary\Git\obj\Debug\WorkGo.g.cs
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary_Content.g.cs
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAccounting.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAddress.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtor.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PAvtorization.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\Pbook.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PGenre.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PProfer.baml
+J:\CourseLibrary\Git\obj\Debug\AddPages\PStudent.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Acounting.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Address.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtor.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Books1.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Genre.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Profer.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Students.baml
+J:\CourseLibrary\Git\obj\Debug\WorkGo.baml
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.CopyComplete
+J:\CourseLibrary\Git\obj\Debug\Interop.LCC11.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.MsoEuro.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.MsoScreenRecorderLib.dll
+J:\CourseLibrary\Git\obj\Debug\Interop.TASKLAUNCHLib.dll
+J:\CourseLibrary\Git\obj\Debug\CourseLibrary.csproj.ResolveComReference.cache
+J:\CourseLibrary\Git\obj\Debug\Otchot.g.cs
+J:\CourseLibrary\Git\obj\Debug\Otchot.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\accountOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\bookOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.g.cs
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\accountOtch.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\bookOtch.baml
+J:\CourseLibrary\Git\obj\Debug\PagesOtcoth\stdOtch.baml
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtorization.g.cs
+J:\CourseLibrary\Git\obj\Debug\Pages\Avtorization.baml

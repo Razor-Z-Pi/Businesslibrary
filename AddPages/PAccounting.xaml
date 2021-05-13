@@ -1,0 +1,115 @@
+﻿<Page x:Class="CourseLibrary.AddPages.PAccounting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CourseLibrary.AddPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PAccounting">
+
+    <Grid>
+        
+        <!--Сетка страницы-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Текст-->
+        
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Рувоводитель"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Студент"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Книга"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="3">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Дата-выдачи"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="4">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Дата-сдачи"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="5">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBlock TextAlignment="Center" Text="Количество книг"></TextBlock>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Поля для ввода-->
+        
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <ComboBox SelectedItem="{Binding id_Profer}" DisplayMemberPath="Name" Width="200" x:Name="cmb_profer"></ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <ComboBox SelectedItem="{Binding id_Student}" DisplayMemberPath="Name" Width="200" x:Name="cmb_stud"></ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <ComboBox SelectedItem="{Binding id_Book}" DisplayMemberPath="Name" Width="200" x:Name="cmb_book"></ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="3">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <DatePicker SelectedDate="{Binding DateOfIssue}"  Width="200" x:Name="DataF"></DatePicker>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="4">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <DatePicker SelectedDate="{Binding DateOfAdoption}"  Width="200" x:Name="DataAdd"></DatePicker>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="5">
+            <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 25">
+                <TextBox Text="{Binding NumberOfBooks}" MaxLength="4" TextAlignment="Center" Width="200" x:Name="Numberbook"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Кнопка для сохранения-->
+        <Button Grid.ColumnSpan="2" Grid.Row="6" Width="80" Height="30" Margin="10" VerticalAlignment="Bottom" Content="Сохранить" x:Name="btn_save" Click="Btn_save_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>
